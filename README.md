@@ -1,5 +1,5 @@
 # enbattle.github.io
-My website!
+My own personal website!
 
 Created from basic HTML, CSS, JavaScript, and Bootstrap!
 
