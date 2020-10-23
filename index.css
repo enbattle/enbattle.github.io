@@ -41,6 +41,7 @@ a {
   text-decoration: none;
 }
 
+/* ----- Logo styling ----- */
 .logo {
   width: 100px;
   height: 75px;
@@ -52,6 +53,8 @@ a {
   width: 25%;
   height: 50%;
 }
+
+/* ------------------------------------------ */
 
 /* Nav-bar text darken */
 .navbarText {
@@ -97,24 +100,6 @@ a {
   margin: 0vh 0vh 10vh 0vh;
 }
 
-/*
-#education {
-  
-}
-
-#workexperience {
-  
-}
-
-#projects {
-  
-}
-
-#leadership {
-  
-}
-*/
-
 /* Cover photo sizing */
 .profile-picture {
   max-width: 100%;
@@ -135,3 +120,63 @@ a {
   margin: 0vh 1vh 10vh 1vh;
   box-shadow: 5px 5px 5px 5px darkslateblue;
 }
+
+/* ----- Making skill bars ----- */
+.skills {
+  background-color: deepskyblue; 
+  color: white; 
+  padding: 1%; 
+  text-align: right; 
+  font-size: 20px; 
+  border-radius: 15px; 
+}
+
+.python {
+  width: 100%;
+}
+
+.c {
+  width: 90%;
+}
+
+.cpp {
+  width: 90%;
+}
+
+.csharp {
+  width: 50%;
+}
+
+.java {
+  width: 50%;
+}
+
+.html { 
+  width: 80%; 
+} 
+
+.css {
+  width: 80%;
+}
+
+.javascript {
+  width: 50%;
+}
+
+.vuejs {
+  width: 80%;
+}
+
+.expressjs {
+  width: 80%;
+}
+
+.nodejs {
+  width: 80%;
+}
+
+.sql {
+  width: 80%;
+}
+
+/* ----------------------------- */
