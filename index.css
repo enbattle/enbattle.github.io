@@ -122,14 +122,21 @@ a {
 }
 
 /* ----- Making skill bars ----- */
-.skills {
+.programming {
   background-color: deepskyblue; 
   color: white; 
   padding: 1%; 
   text-align: right; 
+  width: 100%
   font-size: 20px; 
   border-radius: 15px; 
 }
+
+.progress-container { 
+    background-color: rgb(192, 192, 192); 
+    width: 80%; 
+    border-radius: 15px; 
+} 
 
 .python {
   width: 100%;
