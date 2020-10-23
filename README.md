@@ -3,7 +3,7 @@ My website!
 
 Created from basic HTML, CSS, JavaScript, and Bootstrap!
 
-Topics:
+Structure:
   - Opening section
   - About Me section
   - Education section
