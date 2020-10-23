@@ -159,11 +159,11 @@ a {
 }
 
 .html { 
-  width: 80%; 
+  width: 100%; 
 } 
 
 .css {
-  width: 80%;
+  width: 100%;
 }
 
 .javascript {
@@ -183,7 +183,7 @@ a {
 }
 
 .sql {
-  width: 80%;
+  width: 70%;
 }
 
 /* ----------------------------- */
