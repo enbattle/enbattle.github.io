@@ -143,11 +143,11 @@ a {
 }
 
 .c {
-  width: 90%;
+  width: 80%;
 }
 
 .cpp {
-  width: 90%;
+  width: 80%;
 }
 
 .csharp {
@@ -167,23 +167,19 @@ a {
 }
 
 .javascript {
-  width: 50%;
+  width: 70%;
 }
 
 .vuejs {
-  width: 80%;
-}
-
-.expressjs {
-  width: 80%;
+  width: 50%;
 }
 
 .nodejs {
-  width: 80%;
+  width: 50%;
 }
 
 .sql {
-  width: 70%;
+  width: 50%;
 }
 
 /* ----------------------------- */
