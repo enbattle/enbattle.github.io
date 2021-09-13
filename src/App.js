@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Switch,
   Redirect
@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <HashRouter>
           <Navigation></Navigation>
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/home"></Redirect>}></Route>
@@ -43,7 +43,7 @@ class App extends React.Component {
             <Route component={ PageNotFound }></Route>
           </Switch>
           <Contact></Contact>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
