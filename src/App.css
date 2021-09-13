@@ -1,0 +1,170 @@
+/* ----- Media queries for screen sizes ----- */
+@media screen and (max-width: 500px) {
+  img.social-media {
+    width: 30px !important;
+    text-align: center !important;
+    transition: 0.4s ease-out !important;
+  }
+
+  img.social-media:hover {
+    transform: scale(1.2) !important;
+  }
+
+  .change__smaller__screen {
+    display: inline !important;
+  }
+}
+@media screen and (min-width: 501px) {
+  img.social-media {
+    width: 40px !important;
+    text-align: center !important;
+    transition: 0.4s ease-out !important;
+  }
+
+  img.social-media:hover {
+    transform: scale(1.2) !important;
+  }
+
+  .change__smaller__screen {
+    display: inline !important;
+  }
+}
+/* ------------------------------------------ */
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  background-color: lightgray !important;
+}
+
+/* Use specified font for text */
+.font-text {
+  font-family: Verdana, Geneva, sans-serif !important;
+}
+
+/* Remove underline from anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* ----- Logo styling ----- */
+.logo {
+  width: 100px;
+  height: 75px;
+  float: left;
+  margin-right: -5em;
+}
+
+.technology-logo {
+  width: 25%;
+  height: 50%;
+}
+
+/* ------------------------------------------ */
+
+/* Nav-bar text darken */
+.navbarText {
+  color: white !important;
+}
+
+.navbar-opac {
+  background-color: black;
+  opacity: 0.75 !important;
+}
+
+.navhover:hover {
+  transform: scale(1.1);
+}
+
+.is-active {
+  background-color: rgb(240, 98, 4);
+  border-radius: 0.5em;
+}
+
+/* ----- Some menu button styling ----- */
+#menu-button:hover {
+  background-color: darkslategray;
+}
+
+#menu-button:focus {
+  outline: 0;
+}
+/* ------------------------------------------ */
+
+/* Center quote of the home cover */
+#center-quote {
+  padding: 4em 2em 4em 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: rgb(236, 236, 236);
+  border-radius: 0.5em;
+  width: 70%;
+}
+
+/* Home background */
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./assets/mountain_climbing.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* About Me */
+.about-background {
+  background-color: cornflowerblue;
+  color: white;
+  margin: 0vh 0vh 0vh 0vh;
+}
+
+/* Cover photo sizing */
+.profile-picture {
+  max-width: 100%;
+  max-height: 75%;
+}
+
+/* Programming Section*/
+.programming {
+  background-color: deepskyblue; 
+  color: white; 
+  padding: 1%; 
+  text-align: right; 
+  width: 100%;
+  font-size: 20px; 
+  border-radius: 15px; 
+}
+
+/* Every section fits 100vh */
+.big-section {
+  width: 100%;
+  height: 100vh;
+}
+
+/* staying each section */
+.section-style {
+  border: 2px solid darkslategray;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  margin: 13vh 1vh 10vh 1vh;
+  box-shadow: 5px 5px 5px 5px darkslateblue;
+}
+
+/* Modal Styling */
+.close__button {
+  border: none;
+  background-color: transparent;
+}
+
+.close__button__text {
+  color: gray;
+  font-size: 1.5em;
+}
+
+/* Error Page */
+#page__not__found {
+  margin: 10em;
+}
