@@ -3,8 +3,8 @@ import React from "react";
 class Education extends React.Component {
     render() {
         return (
-            <section id="education" className="container section-style">
-                <div className="m-5">
+            <section id="education" className="container">
+                <div className="section-style m-5 p-5">
                     
                     {/* Education Header */}
                     <div className="row">
@@ -20,7 +20,7 @@ class Education extends React.Component {
                     <div className="col-sm-4">
                         <a href="https://www.rpi.edu" target="_blank" rel="noreferrer"><b>Rensselaer Polytechnic Institute</b></a>
                         <br />
-                        <b>Expected Graduation: May 2021</b>
+                        <b>Graduation Date: May 2021</b>
                     </div>
                     
                     {/* Degree Section */}

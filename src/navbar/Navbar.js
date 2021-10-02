@@ -27,20 +27,20 @@ class Navigation extends React.Component {
 
     render() {
         return (
-            <div ref={node => this.node = node}>
+            <div>
                 <Navbar className="navbar-opac" onToggle={this.toggleNav} expanded={this.state.navExpanded} collapseOnSelect fixed='top' expand='lg' bg='dark' variant='dark'>
                     <Container>
                         <Navbar.Toggle aria-controls='responsive-navbar-nav'></Navbar.Toggle>
                         <Navbar.Collapse id='responsive-navbar-nav'>
                             <Nav className='m-auto'>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/home"><strong>Home</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/about-me"><strong>About Me</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/education"><strong>Education</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/skills"><strong>Programming Languages</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/work-experience"><strong>Experience</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/projects"><strong>Projects</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/hackathons"><strong>Hackathons</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1" to="/leadership"><strong>Leadership</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/home"><strong>Home</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/about-me"><strong>About Me</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/education"><strong>Education</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/skills"><strong>Programming Languages</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/work-experience"><strong>Experience</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/projects"><strong>Projects</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/hackathons"><strong>Hackathons</strong></NavLink>
+                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/leadership"><strong>Leadership</strong></NavLink>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

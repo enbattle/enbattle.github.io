@@ -3,8 +3,8 @@ import React from 'react';
 class Leadership extends React.Component {
   render() {
     return(
-      <section id="leadership" className="container section-style">
-        <div className="m-5">
+      <section id="leadership" className="container">
+        <div className="section-style m-5 p-5">
           
           {/* Leadership Header */}
           <div className="row">

@@ -27,8 +27,8 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <section id="projects" className="container section-style">
-                <div className="m-5">
+            <section id="projects" className="container">
+                <div className="section-style m-5 p-5">
                 
                 {/* Projects Header */}
                 <div className="row">

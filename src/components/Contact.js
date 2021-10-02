@@ -10,7 +10,7 @@ import twitterIcon from '../assets/twitter.png';
 class Contact extends React.Component {
   render() {
     return (
-      <footer id="contact" className="border-top border-light font-text bg-white p-5">
+      <footer id="contact" className="border-top border-light bg-white p-5">
         <div className="container">
           
           {/* Contact Header */}
@@ -66,13 +66,6 @@ class Contact extends React.Component {
                 </a>
               </div>
               
-            </div>
-          </div>
-          
-          {/* Design Marker */}
-          <div className="d-flex justify-content-center">
-            <div className="row">
-              &copy; Designed by Steven Li
             </div>
           </div>
           

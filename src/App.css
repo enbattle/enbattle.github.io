@@ -39,17 +39,12 @@ body {
   background-color: lightgray !important;
 }
 
-/* Use specified font for text */
-.font-text {
-  font-family: Verdana, Geneva, sans-serif !important;
-}
-
 /* Remove underline from anchor tags */
 a {
   text-decoration: none;
 }
 
-/* ----- Logo styling ----- */
+/* Logo styling */
 .logo {
   width: 100px;
   height: 75px;
@@ -62,7 +57,6 @@ a {
   height: 50%;
 }
 
-/* ------------------------------------------ */
 
 /* Nav-bar text darken */
 .navbarText {
@@ -82,16 +76,6 @@ a {
   background-color: rgb(240, 98, 4);
   border-radius: 0.5em;
 }
-
-/* ----- Some menu button styling ----- */
-#menu-button:hover {
-  background-color: darkslategray;
-}
-
-#menu-button:focus {
-  outline: 0;
-}
-/* ------------------------------------------ */
 
 /* Center quote of the home cover */
 #center-quote {
@@ -149,7 +133,6 @@ a {
   border: 2px solid darkslategray;
   background-color: white;
   border-radius: 10px 10px 10px 10px;
-  margin: 13vh;
   box-shadow: 5px 5px 5px 5px darkslateblue;
 }
 
