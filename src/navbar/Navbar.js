@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 
 class Navigation extends React.Component {
@@ -27,25 +27,23 @@ class Navigation extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navbar className="navbar-opac" onToggle={this.toggleNav} expanded={this.state.navExpanded} collapseOnSelect fixed='top' expand='lg' bg='dark' variant='dark'>
-                    <Container>
-                        <Navbar.Toggle aria-controls='responsive-navbar-nav'></Navbar.Toggle>
-                        <Navbar.Collapse id='responsive-navbar-nav'>
-                            <Nav className='m-auto'>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/home"><strong>Home</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/about-me"><strong>About Me</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/education"><strong>Education</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/skills"><strong>Programming Languages</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/work-experience"><strong>Experience</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/projects"><strong>Projects</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/hackathons"><strong>Hackathons</strong></NavLink>
-                                <NavLink activeClassName="is-active" className="nav-link navbarText navhover m-1 p-2" to="/leadership"><strong>Leadership</strong></NavLink>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>  
-            </div>
+            <Navbar className="navbar__opac" onToggle={this.toggleNav} expanded={this.state.navExpanded} collapseOnSelect fixed='top' expand='lg' bg='dark' variant='dark'>
+                <Container>
+                    <Navbar.Toggle aria-controls='responsive-navbar-nav'></Navbar.Toggle>
+                    <Navbar.Collapse id='responsive-navbar-nav'>
+                        <Nav className='m-auto'>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="home" spy={true}><strong>Home</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="aboutme" spy={true}><strong>About Me</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="education" spy={true}><strong>Education</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="programming" spy={true}><strong>Programming Languages</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="workexperience" spy={true}><strong>Experience</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="projects" spy={true}><strong>Projects</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="leadership" spy={true}><strong>Leadership</strong></Link>
+                            <Link activeClass="is__active" className="nav-link navbarText navhover m-1 p-2" to="contact" spy={true}><strong>Contact</strong></Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>  
         );
     }
 }

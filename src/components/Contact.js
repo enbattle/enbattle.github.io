@@ -27,42 +27,42 @@ class Contact extends React.Component {
               {/* Email Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="mailto:listeven6691@gmail.com" target="_blank" rel="noreferrer">
-                  <img className="social-media" src={emailIcon} alt="Email Icon"/>
+                  <img className="social__media" src={emailIcon} alt="Email Icon"/>
                 </a>
               </div>
               
               {/* Facebook Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="https://www.facebook.com/stevenli44" target="_blank" rel="noreferrer">
-                  <img className="social-media" src={facebookIcon} alt="Facebook Icon"/>
+                  <img className="social__media" src={facebookIcon} alt="Facebook Icon"/>
                 </a>
               </div>
               
               {/* LinkedIn Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="https://www.linkedin.com/in/stevenli44" target="_blank" rel="noreferrer">
-                  <img className="social-media" src={linkedinIcon} alt="LinkedIn Icon"/>
+                  <img className="social__media" src={linkedinIcon} alt="LinkedIn Icon"/>
                 </a>
               </div>
               
               {/* Instagram Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="https://www.instagram.com/enbattle" target="_blank" rel="noreferrer">
-                  <img className="social-media" src={instagramIcon} alt="Instagram Icon"/>
+                  <img className="social__media" src={instagramIcon} alt="Instagram Icon"/>
                 </a>
               </div>
               
               {/* GitHub Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="https://www.github.com/enbattle" target="_blank" rel="noreferrer">
-                  <img className="social-media" src= {githubIcon} alt="GitHub Icon"/>
+                  <img className="social__media" src= {githubIcon} alt="GitHub Icon"/>
                 </a>
               </div>
               
               {/* Twitter Icon */}
               <div className="col-sm change__smaller__screen">
                 <a href="https://twitter.com/StevenMeep" target="_blank" rel="noreferrer">
-                  <img className="social-media" src={twitterIcon} alt="Twitter Icon"/>
+                  <img className="social__media" src={twitterIcon} alt="Twitter Icon"/>
                 </a>
               </div>
               

@@ -1,0 +1,115 @@
+/* Media queries for screen sizes */
+@media screen and (max-width: 800px) {
+  /* Skills Sizing */
+  .skill__logo {
+    width: 10vw !important;
+    height: 8vh !important;
+  }
+
+  .skill__grid__container {
+    margin-top: 2vw !important;
+    display: grid !important;
+    grid-gap: 1vw !important;
+    grid-template-columns: auto auto auto !important;
+  }
+  
+  .skill__grid__item {
+    padding: 1vh !important;
+    text-align: center !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Skills Sizing */
+  .skill__logo {
+    width: 10vw !important;
+    height: 18vh !important;
+  }
+
+
+  .skill__grid__container {
+    margin-top: 2vw !important;
+    display: grid !important;
+    grid-gap: 1vw !important;
+    grid-template-columns: auto auto auto auto auto !important;
+  }
+  
+  .skill__grid__item {
+    padding: 1vh !important;
+    text-align: center !important;
+  }
+}
+
+/* Styling each section */
+.section__style {
+  border: 2px solid #FFFFFF;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 
+    2px 2px 1px 1px darkgray,
+    -2px -2px 1px 1px darkgray;
+}
+
+@-webkit-keyframes wobble__vertical__on__hover {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes wobble__vertical__on__hover {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wobble__vertical__on__hover:hover {
+  -webkit-animation-name: wobble__vertical__on__hover;
+  animation-name: wobble__vertical__on__hover;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}

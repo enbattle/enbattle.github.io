@@ -1,0 +1,96 @@
+/* Media queries for screen sizes */
+@media screen and (max-width: 800px) {
+  /* Experience Sizing */
+  .project__grid__container {
+    margin-top: 2vw !important;
+    display: grid !important;
+    grid-gap: 0.5vw !important;
+    grid-template-columns: auto !important;
+  }
+
+  .project__grid__size {
+    width: 50vw !important;
+  }
+
+  .technology__logo__grid__container {
+    display: grid !important;
+    grid-gap: 1vw !important;
+    grid-template-columns: auto !important;
+  }
+
+  .technology__logo {
+    width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* Experience Sizing */
+  .project__grid__container {
+    margin-top: 2vw !important;
+    display: grid !important;
+    grid-gap: 0.5vw !important;
+    grid-template-columns: auto auto auto !important;
+  }
+
+  .project__grid__size {
+    width: 25vw !important;
+  }
+
+  .technology__logo__grid__container {
+    display: grid !important;
+    grid-gap: 1vw !important;
+    grid-template-columns: auto auto auto !important;
+  }
+
+  .technology__logo {
+    width: 100% !important;
+  }
+}
+
+/* Styling each section */
+.section__style {
+  border: 2px solid #FFFFFF;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 
+    2px 2px 1px 1px darkgray,
+    -2px -2px 1px 1px darkgray;
+}
+
+.project__position {
+  color: #00A828 !important;
+}
+
+.project__grid__item {
+  padding: 3vw;
+  margin-top: 2vh;
+  text-align: center;
+  border-width: 1em;
+  border-style: solid;
+  border-radius: 1em 2em 1em 2em;
+  border-image: linear-gradient(to bottom, yellow, green) 1 100%;
+  box-shadow: 
+  0px 1px 1px 1px #28FD7B,
+  0px -1px 1px 1px #FFDF16;
+
+  background-image: linear-gradient(#FF9210, #FF9210), linear-gradient(#FFFFFF, #FFFFFF);
+  background-size: 0 100%, auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all .5s ease-out;
+}
+
+.project__grid__item:hover {
+  color: #FFFFFF;
+  background-size: 100% 100%, auto;
+}
+
+.tooltip__list {
+  list-style: none;
+}
+
+.technology__logo__grid__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,13 +5,13 @@ import profileImg from '../assets/myprofile.jpg';
 class AboutMe extends React.Component {
     render() {
         return (
-            <section id="aboutme" className="about-background p-5">
+            <section id="aboutme" className="about__background p-5">
             <div className="container">
                 <div className="row">
                 
                     {/* Profile Image */}
                     <div className="col-sm-4 d-flex align-items-center">
-                        <img src={profileImg} className="profile-picture rounded-circle mx-auto d-block" alt="Steven Li"/>
+                        <img src={profileImg} className="profile__picture rounded-circle mx-auto d-block" alt="Steven Li"/>
                     </div>
                     
                     {/* Profile Description */}

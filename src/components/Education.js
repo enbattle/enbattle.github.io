@@ -3,13 +3,13 @@ import React from "react";
 class Education extends React.Component {
     render() {
         return (
-            <section id="education" className="container">
-                <div className="section-style m-5 p-5">
+            <section id="education">
+                <div className="section__style m-5 p-5">
                     
                     {/* Education Header */}
                     <div className="row">
                         <div className="col-sm-4">
-                            <h2><b><u>Education</u></b></h2>
+                            <h2><b>Education</b></h2>
                         </div>
                     </div>
                     
