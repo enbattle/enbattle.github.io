@@ -1,35 +1,41 @@
 import React from "react";
+import "./Education.css";
+
+import rpiLogo from '../assets/rpi-logo.png';
 
 class Education extends React.Component {
     render() {
         return (
             <section id="education">
-                <div className="section__style m-5 p-5">
+                <div className="education__section__style m-5 p-5">
                     
                     {/* Education Header */}
                     <div className="row">
                         <div className="col-sm-4">
-                            <h2><b>Education</b></h2>
+                            <h2 className="education__header"><b>Education</b></h2>
                         </div>
                     </div>
-                    
+
                     {/* College Education */}
-                    <div className="row">
-                    
-                    {/* University */}
-                    <div className="col-sm-4">
-                        <a href="https://www.rpi.edu" target="_blank" rel="noreferrer"><b>Rensselaer Polytechnic Institute</b></a>
-                        <br />
-                        <b>Graduation Date: May 2021</b>
+                    <div className="education__grid__container">
+                        <div className="education__grid__item">
+                            <div className="mb-5">
+                                <a href="https://www.rpi.edu" target="_blank" rel="noreferrer"><img className="school__logo" src={rpiLogo} alt="RPI Logo"/></a>
+                            </div>
+                            <div>
+                                <a href="https://www.rpi.edu" target="_blank" rel="noreferrer"><b>Rensselaer Polytechnic Institute</b></a>
+                            </div>
+                            <div>
+                                Bachelor of Science - B.S, Computer Science and Information Technology &amp; Web Science, Dual Major
+                            </div>
+                        </div>
                     </div>
-                    
-                    {/* Degree Section */}
-                    <div className="col-sm-8">
+                        
+                    {/* <div>
                         <div className="mb-3">
                             <b>Bachelor of Science - B.S, Computer Science and Information Technology &amp; Web Science, Dual Major</b>
                         </div>
                         
-                        {/* Computer Science Section */}
                         <div>
                             Relevant Computer Science Coursework
                         </div>
@@ -48,7 +54,6 @@ class Education extends React.Component {
                             </ul>
                         </div>
                         
-                        {/* Information Technology & Web Science Section */}
                         <div>
                             Relevant Information Technology &amp; Web Science Coursework
                         </div>
@@ -61,9 +66,7 @@ class Education extends React.Component {
                                 <li>Visual Design and Theory</li>
                             </ul>
                         </div>
-                    
-                    </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </section>

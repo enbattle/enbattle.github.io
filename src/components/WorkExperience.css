@@ -27,8 +27,8 @@
   }
 }
 
-/* Styling each section */
-.section__style {
+/* Styling experience section */
+.experience__section__style {
   border: 2px solid #FFFFFF;
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -38,7 +38,7 @@
 }
 
 .experience__position {
-  color: #8A23FC !important;
+  color: purple !important;
 }
 
 .experience__grid__item {
@@ -63,6 +63,9 @@
 .experience__grid__item:hover {
   color: #FFFFFF;
   background-size: 100% 100%, auto;
+}
+.experience__grid__item:hover a {
+  color: #FFFFFF;
 }
 
 .tooltip__list {

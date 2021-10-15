@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Contact.css";
 
 import emailIcon from '../assets/email.png';
 import facebookIcon from '../assets/facebook.png';
@@ -10,7 +11,7 @@ import twitterIcon from '../assets/twitter.png';
 class Contact extends React.Component {
   render() {
     return (
-      <footer id="contact" className="border-top border-light bg-white p-5">
+      <footer id="contact" className="footer__container p-5">
         <div className="container">
           
           {/* Contact Header */}
@@ -74,9 +75,7 @@ class Contact extends React.Component {
             <div className="row">
               <span>
               Built with {' '}
-                <a href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a> {' '}
-              and {' '}
-                <a href="https://react-bootstrap.github.io/" target="_blank" rel="noreferrer">React-Bootstrap</a>
+                <a className="react__anchor" href="https://reactjs.org/" target="_blank" rel="noreferrer">React</a>
               </span>
             </div>
           </div>

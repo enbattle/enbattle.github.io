@@ -19,7 +19,7 @@ class Skills extends React.Component {
     render() {
         return (
             <section id="programming">
-                <div className="section__style m-5 p-5">
+                <div className="skills__section__style m-5 p-5">
                     
                     {/* Skills Header */}
                     <div className="row">

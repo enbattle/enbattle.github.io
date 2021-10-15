@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Projects.css";
 import ReactTooltip from 'react-tooltip';
-import { Modal } from "react-bootstrap";
 
 import githubIcon from '../assets/github.png';
 import mongodbImg from '../assets/mongodb.png';
@@ -30,7 +29,7 @@ class Projects extends React.Component {
     render() {
         return (
             <section id="projects">
-                <div className="section__style m-5 p-5">
+                <div className="project__section__style m-5 p-5">
                 
                 {/* Projects Header */}
                 <div className="row">

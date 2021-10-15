@@ -6,7 +6,7 @@ class Leadership extends React.Component {
   render() {
     return(
       <section id="leadership">
-        <div className="section__style m-5 p-5">
+        <div className="leadership__section__style m-5 p-5">
           
           {/* Leadership Header */}
           <div className="row">

@@ -28,7 +28,7 @@
 }
 
 /* Styling each section */
-.section__style {
+.leadership__section__style {
   border: 2px solid #FFFFFF;
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -38,7 +38,7 @@
 }
 
 .leadership__position {
-  color: #8A23FC !important;
+  color: blue !important;
 }
 
 .leadership__grid__item {
@@ -48,12 +48,12 @@
   border-width: 1em;
   border-style: solid;
   border-radius: 1em 2em 1em 2em;
-  border-image: linear-gradient(to bottom, red, blue) 1 100%;
+  border-image: linear-gradient(to bottom, pink, orange) 1 100%;
   box-shadow: 
-  0px 1px 1px 1px #0AE3EF,
-  0px -1px 1px 1px #EF0A30;
+  0px 1px 1px 1px orange,
+  0px -1px 1px 1px pink;
 
-  background-image: linear-gradient(#35ADFD, #35ADFD), linear-gradient(#FFFFFF, #FFFFFF);
+  background-image: linear-gradient(#FC23AD, #FC23AD), linear-gradient(#FFFFFF, #FFFFFF);
   background-size: 0 100%, auto;
   background-repeat: no-repeat;
   background-position: center center;
@@ -63,6 +63,9 @@
 .leadership__grid__item:hover {
   color: #FFFFFF;
   background-size: 100% 100%, auto;
+}
+.leadership__grid__item:hover a {
+  color: #FFFFFF;
 }
 
 .tooltip__list {

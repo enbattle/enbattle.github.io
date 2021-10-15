@@ -48,7 +48,7 @@
 }
 
 /* Styling each section */
-.section__style {
+.project__section__style {
   border: 2px solid #FFFFFF;
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -58,7 +58,7 @@
 }
 
 .project__position {
-  color: #00A828 !important;
+  color: green !important;
 }
 
 .project__grid__item {
@@ -83,6 +83,9 @@
 .project__grid__item:hover {
   color: #FFFFFF;
   background-size: 100% 100%, auto;
+}
+.project__grid__item:hover a {
+  color: #FFFFFF;
 }
 
 .tooltip__list {

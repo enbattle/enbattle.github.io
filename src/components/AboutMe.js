@@ -1,4 +1,5 @@
 import React from "react";
+import "./AboutMe.css";
 
 import profileImg from '../assets/myprofile.jpg';
 

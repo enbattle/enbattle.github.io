@@ -7,7 +7,7 @@ class WorkExperience extends React.Component {
     render() {
         return (
             <section id="workexperience">
-                <div className="section__style m-5 p-5">
+                <div className="experience__section__style m-5 p-5">
                     
                     {/* Work Experience header */}
                     <div className="row">
