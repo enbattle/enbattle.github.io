@@ -20,7 +20,7 @@ const createCube = (size) => {
 
 const createSphere = (radius) => {
   const geometry = new THREE.SphereGeometry(radius, 32, 16);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffff00 });
+  const material = new THREE.MeshStandardMaterial({ color: "#33cc33" });
   const sphere = new THREE.Mesh(geometry, material);
 
   sphere.position.x = 0;
@@ -32,7 +32,7 @@ const createSphere = (radius) => {
 
 const createDodecahedron = (radius) => {
   const geometry = new THREE.DodecahedronGeometry(radius);
-  const material = new THREE.MeshStandardMaterial({ color: 0xffff00 });
+  const material = new THREE.MeshStandardMaterial({ color: "#00ccff" });
   const dodecahedron = new THREE.Mesh(geometry, material);
 
   dodecahedron.position.x = -20;
