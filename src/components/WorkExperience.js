@@ -1,99 +1,114 @@
-import React from 'react';
-import "./WorkExperience.css";
+import React from "react";
+import { 
+  Box,
+  Text,
+  SlideFade,
+  Grid,
+  GridItem,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverArrow,
+  PopoverCloseButton
+} from "@chakra-ui/react";
 
-import ReactTooltip from 'react-tooltip';
+const gridItemStyles = {
+  minHeight: "20vh",
+  colSpan: 12,
+  border: "1px",
+  borderColor: "gray",
+  borderRadius: "1rem"
+}
 
-class WorkExperience extends React.Component {
-    render() {
-        return (
-            <section id="workexperience">
-                <div className="experience__section__style m-5 p-5">
-                    
-                    {/* Work Experience header */}
-                    <div className="row">
-                        <div className="col-sm-4">
-                            <h2><b>Work Experience</b></h2>
-                        </div>
-                    </div>
+const WorkExperience = ({currentSection, sectionStyles}) => {
+  const shouldOpen = currentSection === "WorkExperience" ? true : false;
 
-                    <div className="experience__grid__container">
-                        {/* KeyBank Section */}
-                        <div className="experience__grid__item experience__grid__size" data-tip data-for="keybankDescription">
-                            <div>
-                                <div>
-                                    <h3 className="experience__position"><b>Data Architect Intern</b></h3>
-                                </div>
-                                <div>
-                                    <a href="https://www.key.com" target="_blank" rel="noreferrer"><b>KeyBank</b></a>
-                                </div>
-                                <div>
-                                    <i>June 2020 - August 2020</i>
-                                </div>
-                                <div>
-                                    <p>Albany, New York, United States</p>
-                                </div>
-                            </div>
-                        </div>
-                        <ReactTooltip id="keybankDescription" place="bottom">
-                            <ul className="tooltip__list">
-                                <li>&#9758; Utilized Tableau to create data models and data visualizations for enterprise data, accelerating database operation efficiency of departments.</li>
-                                <li>&#9758; Improved data source retrieval time of enterprise data through the restructuring of SQL queries.</li>
-                            </ul>
-                        </ReactTooltip>
-                            
-                        {/* Crestron Electronics Section */}
-                        <div className="experience__grid__item experience__grid__size" data-tip data-for="crestronDescription">
-                            <div>
-                                <div>
-                                    <h3 className="experience__position"><b>Software Engineering Intern</b></h3>
-                                </div>
-                                <div>
-                                    <a href="https://www.crestron.com" target="_blank" rel="noreferrer"><b>Crestron Electronics</b></a>
-                                </div>
-                                <div>
-                                    <i>January 2020 - June 2020</i>
-                                </div>
-                                <div>
-                                    <p>Rockleigh, New Jersey, United States</p>
-                                </div>
-                            </div>
-                        </div>
-                        <ReactTooltip id="crestronDescription" place="bottom">
-                            <ul className="tooltip__list">
-                                <li>&#9758; Developed efficient smart home drivers in C# for latest audio/video players, televisions, and security systems to be integrated with Crestron’s control systems.</li>
-                                <li>&#9758; Revamped current security system drivers with a new security framework and assisted with the security test environment.</li>
-                                <li>&#9758; Collaborated with the quality engineering team to conduct regression testing and analysis for updated smart home drivers and control systems prior to application release.</li>
-                            </ul>
-                        </ReactTooltip>
+  return ( 
+    <SlideFade in={shouldOpen}>
+      <Box {...sectionStyles}>
+        <Text fontSize={"2rem"} fontWeight={"bold"} mb="2vh">Work Experience</Text>
 
-                        {/* VCC HelpDesk Consultant Section */}
-                        <div className="experience__grid__item experience__grid__size" data-tip data-for="helpdeskDescription">
-                            <div>
-                                <div>
-                                    <h3 className="experience__position"><b>HelpDesk Consultant</b></h3>
-                                </div>
-                                <div>
-                                    <a href="https://itssc.rpi.edu" target="_blank" rel="noreferrer"><b>Voorhees Computing Center at Rensselaer Polytechnic Institute</b></a>
-                                </div>
-                                <div>
-                                    <i>April 2019 - December 2020</i>
-                                </div>
-                                <div>
-                                    <p>Troy, New York, United States</p>
-                                </div>
-                            </div>
-                        </div>
-                        <ReactTooltip id="helpdeskDescription" place="bottom">
-                            <ul className="tooltip__list">
-                                <li>&#9758; Provided technical services for students and staff, such as resolving network issues and BIOS issues, computer reimaging, system dual-boot, and any other software-related needs.</li>
-                            </ul>
-                        </ReactTooltip>
-                    </div>
-                    
-                </div>
-            </section>
-        );
-    }
+        <Grid
+          templateColumns="repeat(12, 1fr)"
+          gap={8}
+          display={"grid"}
+        >
+          <GridItem {...gridItemStyles}>
+            <Box p={10}>
+              <Text>
+                Accenture <br/>
+                Advanced Application Engineering Senior Analyst (May 2022 - Current) <br/>
+                Advanced Application Engineering Analyst (July 2021 - May 2022) <br/>
+                New York, New York, United States
+              </Text>
+            </Box>
+          </GridItem>
+
+          <GridItem id="experience2" {...gridItemStyles}>
+            <Popover 
+              onOpen={() => { document.getElementById("experience2").style.backgroundColor = "skyblue" }} 
+              onClose={() => { document.getElementById("experience2").style.backgroundColor = "transparent" }}
+            >
+              <PopoverTrigger>
+                <Box p={10}>
+                  <Text>
+                    Keybank <br/>
+                    Data Architect Intern (June 2020 - August 2020) <br/>
+                    Albany, New York, United States
+                  </Text>
+                </Box>
+              </PopoverTrigger>
+
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton />
+                <PopoverHeader>Keybank Internship</PopoverHeader>
+                <PopoverBody>
+                  <Text mb={"1vh"}>
+                    &#9758; Utilized Tableau to create data models and data visualizations for enterprise data, accelerating database operation efficiency of departments.
+                  </Text>
+                  <Text>
+                    &#9758; Improved data source retrieval time of enterprise data through the restructuring of SQL queries.
+                  </Text>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          </GridItem>
+
+          <GridItem id="experience3" {...gridItemStyles}>
+            <Popover
+              onOpen={() => { document.getElementById("experience3").style.backgroundColor = "skyblue" }} 
+              onClose={() => { document.getElementById("experience3").style.backgroundColor = "transparent" }}
+            >
+              <PopoverTrigger>
+                <Box p={10}>
+                  <Text>
+                    Crestron Electronics <br/>
+                    Software Engineering Intern (January 2020 - June 2020) <br/>
+                    Rockleigh, New Jersey, United States
+                  </Text>
+                </Box>
+              </PopoverTrigger>
+
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton />
+                <PopoverHeader>Crestron Electronics Internship</PopoverHeader>
+                <PopoverBody>
+                  <Text mb={"1vh"}>&#9758; Developed efficient smart home drivers in C# for latest audio/video players, televisions, and security systems to be integrated with Crestron’s control systems.</Text>
+                  <Text mb={"1vh"}>&#9758; Revamped current security system drivers with a new security framework and assisted with the security test environment.</Text>
+                  <Text>&#9758; Collaborated with the quality engineering team to conduct regression testing and analysis for updated smart home drivers and control systems prior to application release.</Text>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          </GridItem>
+
+        </Grid>
+      </Box>
+    </SlideFade>
+  );
 }
 
 export default WorkExperience;
