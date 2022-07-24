@@ -20,7 +20,7 @@ const createCube = (size) => {
 
 const createSphere = (radius) => {
   const geometry = new THREE.SphereGeometry(radius, 32, 16);
-  const material = new THREE.MeshStandardMaterial({ color: "#33cc33" });
+  const material = new THREE.MeshStandardMaterial({ color: "#33CC33" });
   const sphere = new THREE.Mesh(geometry, material);
 
   sphere.position.x = 0;
@@ -32,7 +32,7 @@ const createSphere = (radius) => {
 
 const createDodecahedron = (radius) => {
   const geometry = new THREE.DodecahedronGeometry(radius);
-  const material = new THREE.MeshStandardMaterial({ color: "#00ccff" });
+  const material = new THREE.MeshStandardMaterial({ color: "#00CCFF" });
   const dodecahedron = new THREE.Mesh(geometry, material);
 
   dodecahedron.position.x = -20;
@@ -40,6 +40,30 @@ const createDodecahedron = (radius) => {
   dodecahedron.position.z = 0;
 
   return dodecahedron;
+}
+
+const createIcosahedron = (radius) => {
+  const geometry = new THREE.IcosahedronGeometry(radius);
+  const material = new THREE.MeshStandardMaterial({ color: "#FF6C00" });
+  const icosahedron = new THREE.Mesh(geometry, material);
+
+  icosahedron.position.x = -10;
+  icosahedron.position.y = -10;
+  icosahedron.position.z = 0;
+
+  return icosahedron;
+}
+
+const createCapsule = (radius, length) => {
+  const geometry = new THREE.CapsuleGeometry( radius, length, 4, 8 );
+  const material = new THREE.MeshBasicMaterial({ color: "#29009F" });
+  const capsule = new THREE.Mesh( geometry, material );
+
+  capsule.position.x = 10;
+  capsule.position.y = 10;
+  capsule.position.z = 0;
+
+  return capsule;
 }
 
 const BouncingField = () => {
@@ -52,7 +76,7 @@ const BouncingField = () => {
     const { current: container } = refContainer;
     if (container && renderer && camera) {
       const scW = container.clientWidth;
-      const scH = 500;
+      const scH = container.clientHeight;
 
       console.log(scW, scH);
 
@@ -68,7 +92,7 @@ const BouncingField = () => {
     
     if (container && !renderer) {
       const scW = container.clientWidth - 17;
-      const scH = 500;
+      const scH = container.clientHeight;
 
       const _renderer = new THREE.WebGLRenderer({
         antialias: true,
@@ -90,6 +114,13 @@ const BouncingField = () => {
       const dodecahedronRadius = 10;
       const dodecahedron = createDodecahedron(dodecahedronRadius);
 
+      const capsuleRadius = 10;
+      const capsuleLength = 5;
+      const capsule = createCapsule(capsuleRadius, capsuleLength);
+
+      const icosahedronRadius = 10;
+      const icosahedron = createIcosahedron(icosahedronRadius);
+
       // AmbientLight(color: string, intensity: float)
       // Omnipresent and applied to everything equally, does not cast shadows because it does not have direction
       // Wil change how other colors appear
@@ -105,6 +136,8 @@ const BouncingField = () => {
       _scene.add(cube);
       _scene.add(sphere);
       _scene.add(dodecahedron);
+      _scene.add(icosahedron);
+      _scene.add(capsule);
       _scene.add(ambientLight);
       _scene.add(pointLight);
       scene.current = _scene;
@@ -123,6 +156,12 @@ const BouncingField = () => {
       let dodecahedronXSpeed = randomSpeed(1);
       let dodecahedronYSpeed = randomSpeed(1);
 
+      let capsuleXSpeed = randomSpeed(1);
+      let capsuleYSpeed = randomSpeed(1);
+
+      let icosahedronXSpeed = randomSpeed(1);
+      let icosahedronYSpeed = randomSpeed(1);
+
       const animate = () => {
         requestAnimationFrame(animate);
 
@@ -135,6 +174,12 @@ const BouncingField = () => {
         dodecahedron.rotation.x += 0.01;
         dodecahedron.rotation.y += 0.01;
 
+        capsule.rotation.x += 0.01;
+        capsule.rotation.y += 0.01;
+
+        icosahedron.rotation.x += 0.01;
+        icosahedron.rotation.y += 0.01;
+
         cube.position.x += cubeXSpeed;
         cube.position.y += cubeYSpeed;
 
@@ -143,6 +188,12 @@ const BouncingField = () => {
 
         dodecahedron.position.x += dodecahedronXSpeed;
         dodecahedron.position.y += dodecahedronYSpeed;
+
+        capsule.position.x += capsuleXSpeed;
+        capsule.position.y += capsuleYSpeed;
+
+        icosahedron.position.x += icosahedronXSpeed;
+        icosahedron.position.y += icosahedronYSpeed;
 
         if(cube.position.x + boxSize >= 160 || cube.position.x - boxSize <= -160) {
           cubeXSpeed = -cubeXSpeed;
@@ -165,6 +216,20 @@ const BouncingField = () => {
           dodecahedronYSpeed = -dodecahedronYSpeed;
         }
 
+        if(capsule.position.x + capsuleRadius + capsuleLength >= 160 || capsule.position.x - capsuleRadius - capsuleLength <= -160) {
+          capsuleXSpeed = -capsuleXSpeed;
+        }
+        if(capsule.position.y + capsuleRadius + capsuleLength >= 100 || capsule.position.y - capsuleRadius - capsuleLength <= -100) {
+          capsuleYSpeed = -capsuleYSpeed;
+        }
+
+        if(icosahedron.position.x + icosahedronRadius >= 160 || icosahedron.position.x - icosahedronRadius <= -160) {
+          icosahedronXSpeed = -icosahedronXSpeed;
+        }
+        if(icosahedron.position.y + icosahedronRadius >= 100 || icosahedron.position.y - icosahedronRadius <= -100) {
+          icosahedronYSpeed = -icosahedronYSpeed;
+        }
+
         _renderer.render(_scene, _camera);
       };
 
@@ -185,7 +250,7 @@ const BouncingField = () => {
   }, [renderer, handleWindowResize]);
 
   return (
-    <Box ref={refContainer}></Box>
+    <Box ref={refContainer} style={{position: "absolute"}} w={"100%"} h={"100%"} minH={"90vh"} minW={"90vw"} zIndex={-1}></Box>
   );
 }
 

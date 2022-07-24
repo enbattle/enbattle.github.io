@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
 import BouncingField from "./components/BouncingField";
+import Footer from "./components/Footer";
 
 const sectionStyles = {
   mt: "1vh",
@@ -18,6 +19,8 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       {/* <Logo h="40vmin" pointerEvents="none" /> */}
+      <BouncingField/>
+
       <Box fontWeight={200}>
         <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
         { 
@@ -32,11 +35,8 @@ function App() {
           currentSection === "WorkExperience" &&
           <WorkExperience currentSection={currentSection} sectionStyles={sectionStyles} />
         }
-        <BouncingField/>
 
-        <Box m={"5vw"} align={"center"} justify={"center"}>
-          Built using React, Chakra UI, and ThreeJS.
-        </Box>
+        <Footer/>
       </Box>
     </ChakraProvider>
   );

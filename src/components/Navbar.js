@@ -10,7 +10,7 @@ import { AiFillMail, AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineMenu
 
 const flexStyles = {
   justify: "start",
-  align: "center"
+  align: "end"
 }
 
 const linkStyles = {
@@ -46,7 +46,7 @@ const Navbar = ({currentSection, setCurrentSection}) => {
             rel="noopener noreferrer"
             {...linkStyles}
           >
-            <Text fontSize={"3vw"} fontWeight={500}>Steven Li</Text>
+            <Text fontSize={"2vw"} fontWeight={500}>Steven Li</Text>
           </Link>
           <Link
             onClick={(event) => toggleEvent(event, "Education")}
