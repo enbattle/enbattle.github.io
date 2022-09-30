@@ -5,16 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
-const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 // If you use strict mode, it's useful in catching other bugs and issues, but causes react hooks to be called twice
 root.render(
   // <StrictMode>
-  <Box>
-    <ColorModeScript />
-    <App />
-  </Box>
+  <React.StrictMode>
+    <Box>
+      <ColorModeScript />
+      <App />
+    </Box>
+  </React.StrictMode>
   // </StrictMode>
 );
 

@@ -2,11 +2,11 @@ import React from "react";
 import * as THREE from "three";
 import { Box } from "@chakra-ui/react";
 
-const randomSpeed = (speed) => {
+const randomSpeed = (speed: number): number => {
   return Math.random() < 0.5 ? -speed : speed;
 }
 
-const createCube = (size) => {
+const createCube = (size: number): THREE.Mesh => {
   const geometry = new THREE.BoxGeometry(size, size, size);
   const material = new THREE.MeshStandardMaterial({color: "#FF0051"});
   const cube = new THREE.Mesh(geometry, material);
@@ -18,7 +18,7 @@ const createCube = (size) => {
   return cube;
 }
 
-const createSphere = (radius) => {
+const createSphere = (radius: number): THREE.Mesh => {
   const geometry = new THREE.SphereGeometry(radius, 32, 16);
   const material = new THREE.MeshStandardMaterial({ color: "#33CC33" });
   const sphere = new THREE.Mesh(geometry, material);
@@ -30,7 +30,7 @@ const createSphere = (radius) => {
   return sphere;
 }
 
-const createDodecahedron = (radius) => {
+const createDodecahedron = (radius: number): THREE.Mesh => {
   const geometry = new THREE.DodecahedronGeometry(radius);
   const material = new THREE.MeshStandardMaterial({ color: "#00CCFF" });
   const dodecahedron = new THREE.Mesh(geometry, material);
@@ -42,7 +42,7 @@ const createDodecahedron = (radius) => {
   return dodecahedron;
 }
 
-const createIcosahedron = (radius) => {
+const createIcosahedron = (radius: number): THREE.Mesh => {
   const geometry = new THREE.IcosahedronGeometry(radius);
   const material = new THREE.MeshStandardMaterial({ color: "#FF6C00" });
   const icosahedron = new THREE.Mesh(geometry, material);
@@ -54,7 +54,7 @@ const createIcosahedron = (radius) => {
   return icosahedron;
 }
 
-const createCapsule = (radius, length) => {
+const createCapsule = (radius: number, length: number): THREE.Mesh => {
   const geometry = new THREE.CapsuleGeometry( radius, length, 4, 8 );
   const material = new THREE.MeshBasicMaterial({ color: "#29009F" });
   const capsule = new THREE.Mesh( geometry, material );
@@ -67,10 +67,10 @@ const createCapsule = (radius, length) => {
 }
 
 const BouncingField = () => {
-  const refContainer = React.useRef();
-  const [camera, setCamera] = React.useState();
-  const [renderer, setRenderer] = React.useState();
-  const scene = React.useRef();
+  const refContainer = React.useRef<HTMLDivElement>(null);
+  const [camera, setCamera] = React.useState<THREE.Camera>();
+  const [renderer, setRenderer] = React.useState<THREE.Renderer>();
+  const scene = React.useRef<THREE.Scene>();
 
   const handleWindowResize = React.useCallback(() => {
     const { current: container } = refContainer;

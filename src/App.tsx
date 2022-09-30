@@ -7,14 +7,20 @@ import WorkExperience from "./components/WorkExperience";
 import BouncingField from "./components/BouncingField";
 import Footer from "./components/Footer";
 
-const sectionStyles = {
+export interface SectionStyles {
+  mt: string,
+  mb: string,
+  mx: string
+}
+
+const sectionStyles: SectionStyles = {
   mt: "1vh",
   mb: "5vh",
   mx: "20vw"
 }
 
 function App() {
-  const [currentSection, setCurrentSection] = React.useState("Home");
+  const [currentSection, setCurrentSection] = React.useState<string>("Home");
 
   return (
     <div id="main" role="main">

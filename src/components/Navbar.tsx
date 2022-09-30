@@ -8,6 +8,11 @@ import { Flex, Box, Link, useColorModeValue, Text, Icon, IconButton,
 import { ColorModeSwitcher } from "../ColorModeSwitcher";
 import { AiFillMail, AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillProject, AiOutlineUser, AiFillHome } from "react-icons/ai";
 
+interface INavbarParameters {
+  currentSection: string,
+  setCurrentSection: (section: string) => void
+}
+
 const flexStyles = {
   justify: "start",
   align: "end"
@@ -26,10 +31,10 @@ const iconButtonStyles = {
   m: 3
 }
 
-const Navbar = ({currentSection, setCurrentSection}) => {
-  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900")
+const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
+  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
 
-  const toggleEvent = (event, newSection) => {
+  const toggleEvent = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent> | React.MouseEvent<HTMLButtonElement, MouseEvent>, newSection: string) => {
     event.preventDefault();
     setCurrentSection(newSection);
   }
