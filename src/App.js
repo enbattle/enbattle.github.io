@@ -17,28 +17,30 @@ function App() {
   const [currentSection, setCurrentSection] = React.useState("Home");
 
   return (
-    <ChakraProvider theme={theme}>
-      {/* <Logo h="40vmin" pointerEvents="none" /> */}
-      <BouncingField/>
+    <div id="main" role="main">
+      <ChakraProvider theme={theme}>
+        {/* <Logo h="40vmin" pointerEvents="none" /> */}
+        <BouncingField/>
 
-      <Box fontWeight={200}>
-        <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
-        { 
-          currentSection === "Home" &&
-          <Home currentSection={currentSection} sectionStyles={sectionStyles} />
-        }
-        {
-          currentSection === "Education" &&
-          <Education currentSection={currentSection} sectionStyles={sectionStyles} />
-        }
-        {
-          currentSection === "WorkExperience" &&
-          <WorkExperience currentSection={currentSection} sectionStyles={sectionStyles} />
-        }
+        <Box fontWeight={200}>
+          <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
+          { 
+            currentSection === "Home" &&
+            <Home currentSection={currentSection} sectionStyles={sectionStyles} />
+          }
+          {
+            currentSection === "Education" &&
+            <Education currentSection={currentSection} sectionStyles={sectionStyles} />
+          }
+          {
+            currentSection === "WorkExperience" &&
+            <WorkExperience currentSection={currentSection} sectionStyles={sectionStyles} />
+          }
 
-        <Footer/>
-      </Box>
-    </ChakraProvider>
+          <Footer/>
+        </Box>
+      </ChakraProvider>
+    </div>
   );
 }
 
