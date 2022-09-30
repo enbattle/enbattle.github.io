@@ -71,6 +71,15 @@ const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
           >
             <Text fontSize={"1.5vw"} fontWeight={250}>Work Experience</Text>
           </Link>
+          <Link 
+            onClick={(event) => toggleEvent(event, "Projects")}
+            bg={currentSection === "Projects" ? "#99ff99" : "transparent"}
+            color={currentSection === "Projects" ? "#202023" : inactiveColor}
+            rel="noopener noreferrer"
+            {...linkStyles}
+          >
+            <Text fontSize={"1.5vw"} fontWeight={250}>Projects</Text>
+          </Link>
         </Flex>
 
         {/* Contact Icons (shown on bigger screens) */}

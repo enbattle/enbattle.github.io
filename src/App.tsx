@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
+import Projects from "./components/Projects";
 import BouncingField from "./components/BouncingField";
 import Footer from "./components/Footer";
 
@@ -42,7 +43,10 @@ function App() {
             currentSection === "WorkExperience" &&
             <WorkExperience currentSection={currentSection} sectionStyles={sectionStyles} />
           }
-
+          {
+            currentSection === "Projects" &&
+            <Projects currentSection={currentSection} sectionStyles={sectionStyles} />
+          }
           <Footer/>
         </Box>
       </ChakraProvider>

@@ -78,8 +78,6 @@ const BouncingField = () => {
       const scW = container.clientWidth;
       const scH = container.clientHeight;
 
-      console.log(scW, scH);
-
       // No need to change the camera configurations here (causes issues in the bouncing of objects)
       // camera.aspect = scW / scH;
       // camera.updateProjectionMatrix();
