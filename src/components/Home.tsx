@@ -13,9 +13,9 @@ const Home = ({currentSection, sectionStyles}: IHomeParameters) => {
     <SlideFade in={shouldOpen}>
       <Box {...sectionStyles}>
         <Box>
-          <Text fontSize={"2rem"} fontWeight={"bold"}>Steven Li</Text>
+          <Text fontSize="2rem" fontWeight="bold">Steven Li</Text>
           <Text mb="5vh">Developer / Designer / Dancer / Cook</Text>
-          <Text fontSize={"1rem"} fontWeight={400} mb="1vh">About Me</Text>
+          <Text fontSize="1rem" fontWeight={400} mb="1vh">About Me</Text>
           <Text mb="1vh">
             Steven completed his undergraduate study with a dual degree in Computer Science and Information 
             Technology &amp; Web Science at Rensselaer Polytechnic Institute in 2021. Armed with an open 

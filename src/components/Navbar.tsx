@@ -44,46 +44,46 @@ const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
       <Flex>
 
         {/* Home, Bio, and Work Experience Links (shown on bigger screens) */}
-        <Flex ml={"4.75vw"} flex={9} display={{ base: "none", md: "flex" }} {...flexStyles}>
+        <Flex ml="4.75vw" flex={9} display={{ base: "none", md: "flex" }} {...flexStyles}>
           <Link
             style={{textDecoration: "none"}}
             onClick={(event) => toggleEvent(event, "Home")}
             rel="noopener noreferrer"
             {...linkStyles}
           >
-            <Text fontSize={"2vw"} fontWeight={500}>Steven Li</Text>
+            <Text fontSize="1.5vw" fontWeight={500}>About Me</Text>
           </Link>
           <Link
+            _hover={{color: "#E88702"}}
             onClick={(event) => toggleEvent(event, "Education")}
-            bg={currentSection === "Education" ? "#99ff99" : "transparent"}
-            color={currentSection === "Education" ? "#202023" : inactiveColor}
+            textDecoration={currentSection === "Education" ? "underline" : "none"}
             rel="noopener noreferrer"
             {...linkStyles}
           >
-            <Text fontSize={"1.5vw"} fontWeight={250}>Education</Text>
+            <Text fontSize="1.5vw" fontWeight={250}>Education</Text>
           </Link>
-          <Link 
+          <Link
+            _hover={{color: "#E88702"}}
             onClick={(event) => toggleEvent(event, "WorkExperience")}
-            bg={currentSection === "WorkExperience" ? "#99ff99" : "transparent"}
-            color={currentSection === "WorkExperience" ? "#202023" : inactiveColor}
+            textDecoration={currentSection === "WorkExperience" ? "underline" : "none"}
             rel="noopener noreferrer"
             {...linkStyles}
           >
             <Text fontSize={"1.5vw"} fontWeight={250}>Work Experience</Text>
           </Link>
-          <Link 
+          <Link
+            _hover={{color: "#E88702"}}
             onClick={(event) => toggleEvent(event, "Projects")}
-            bg={currentSection === "Projects" ? "#99ff99" : "transparent"}
-            color={currentSection === "Projects" ? "#202023" : inactiveColor}
+            textDecoration={currentSection === "Projects" ? "underline" : "none"}
             rel="noopener noreferrer"
             {...linkStyles}
           >
-            <Text fontSize={"1.5vw"} fontWeight={250}>Projects</Text>
+            <Text fontSize="1.5vw" fontWeight={250}>Projects</Text>
           </Link>
         </Flex>
 
         {/* Contact Icons (shown on bigger screens) */}
-        <Flex mr={"5vw"} flex={3} display={{ base: "none", md: "flex" }} {...flexStyles}>
+        <Flex mr="5vw" flex={3} display={{ base: "none", md: "flex" }} {...flexStyles}>
           <IconButton
             {...iconButtonStyles}
             onClick={() => {
@@ -122,7 +122,7 @@ const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
         </Flex>
 
         {/* Small screen menu (replaces links and icons on small screens) */}
-        <Flex ml={"10vw"} flex={9} display={{ base: "inline-flex", md: "none" }} {...flexStyles}>
+        <Flex ml="10vw" flex={9} display={{ base: "inline-flex", md: "none" }} {...flexStyles}>
           <Menu>
             <MenuButton
               as={IconButton}

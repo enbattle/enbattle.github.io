@@ -1,26 +1,14 @@
 import { 
   Box,
-  Text,
-  SlideFade,
-  Grid,
-  GridItem,
-  Image,
-  Link
+  SlideFade
 } from "@chakra-ui/react";
 import { SectionStyles } from "../App";
 import PathfindingVisualizer from "../assets/pathfinding-visualizer-project.png";
+import Card from "../util/card";
 
 interface IProjectParameters {
   currentSection: string,
   sectionStyles: SectionStyles
-}
-
-const gridItemStyles = {
-  minHeight: "20vh",
-  colSpan: 12,
-  border: "1px",
-  borderColor: "gray",
-  borderRadius: "1rem"
 }
 
 const Projects = ({currentSection, sectionStyles}: IProjectParameters) => {
@@ -29,23 +17,14 @@ const Projects = ({currentSection, sectionStyles}: IProjectParameters) => {
   return ( 
     <SlideFade in={shouldOpen}>
       <Box {...sectionStyles}>
-        <Text fontSize={"2rem"} fontWeight={"bold"} mb="2vh">Projects</Text>
-
-        <Grid
-          templateColumns="repeat(12, 1fr)"
-          gap={8}
-          display={"grid"}
-        >
-          <GridItem {...gridItemStyles}>
-            <Box p={10}>
-              <Image src={PathfindingVisualizer} alt="Pathfinding Visualizer front page"/>
-              <Text textAlign="center" mt="1vh" fontSize="2rem">
-                <Link href='https://enbattle.github.io/pathfinding-visualizer' isExternal>Pathfinding Visualizer</Link>
-              </Text>
-            </Box>
-          </GridItem>
-
-        </Grid>
+        <Card
+          title={"Pathfinding Visualizer"}
+          imageUrl={PathfindingVisualizer}
+          imageAlt={"Pathfinding visualize front page image"}
+          technologies={["React", "Typescript"]}
+          sourceCodeHref={"https://github.com/enbattle/pathfinding-visualizer"}
+          appSiteHref={"https://enbattle.github.io/pathfinding-visualizer/"}
+        />
       </Box>
     </SlideFade>
   );

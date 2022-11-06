@@ -1,12 +1,11 @@
 import React from "react";
-import { ChakraProvider, Box, theme } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Education from "./components/Education";
-import WorkExperience from "./components/WorkExperience";
-import Projects from "./components/Projects";
-import BouncingField from "./components/BouncingField";
-import Footer from "./components/Footer";
+import { ChakraProvider, Box, theme, Divider } from "@chakra-ui/react";
+import Navbar from "./components/navbar";
+import Home from "./components/home";
+import Education from "./components/education";
+import WorkExperience from "./components/work-experience";
+import Projects from "./components/projects";
+import Footer from "./components/footer";
 
 export interface SectionStyles {
   mt: string,
@@ -26,10 +25,7 @@ function App() {
   return (
     <div id="main" role="main">
       <ChakraProvider theme={theme}>
-        {/* <Logo h="40vmin" pointerEvents="none" /> */}
-        <BouncingField/>
-
-        <Box fontWeight={200}>
+        <Box fontWeight={200} minHeight="80vh">
           <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
           { 
             currentSection === "Home" &&
@@ -47,8 +43,11 @@ function App() {
             currentSection === "Projects" &&
             <Projects currentSection={currentSection} sectionStyles={sectionStyles} />
           }
-          <Footer/>
         </Box>
+
+        <Divider/>
+
+        <Footer/>
       </ChakraProvider>
     </div>
   );
