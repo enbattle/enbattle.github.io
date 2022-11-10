@@ -5,18 +5,29 @@ import {
   Text,
   SlideFade,
   Grid,
-  GridItem
+  GridItem,
+  Spinner
 } from "@chakra-ui/react";
 import AccentureLogo from "../../assets/accenture-logo.jpg";
 import KeybankLogo from "../../assets/keybank-logo.jpg";
 import CrestronLogo from "../../assets/crestron-logo.jpg";
+import React from "react";
 
 interface IWorkExperienceParameters {
   currentSection: string
 }
 
+interface IImageLoaded {
+  [key: string] : boolean
+}
+
 const WorkExperience = ({currentSection}: IWorkExperienceParameters) => {
   const shouldOpen = currentSection === "WorkExperience" ? true : false;
+  const [imagesLoaded, setImagesLoaded] = React.useState<IImageLoaded>({
+    "accenture-image": false,
+    "keybank-image": false,
+    "crestron-image": false
+  });
 
   return ( 
     <SlideFade in={shouldOpen}>
@@ -27,7 +38,22 @@ const WorkExperience = ({currentSection}: IWorkExperienceParameters) => {
             <Box className="flip-card-inner morph-bg">
               <Box className="flip-card-front d-flex justify-content-center align-items-center">
                 <Box>
-                  <Image className="work__experience-grid--image" src={AccentureLogo} alt="Accenture Logo"/>
+                  {!imagesLoaded["accenture-image"] &&
+                    <Box className="d-flex justify-content-center">
+                      <Spinner/>
+                    </Box>
+                  }
+                  <Image
+                    onLoad={() => {
+                      setImagesLoaded((loaded) => {
+                        return { ...loaded, "accenture-image": true };
+                      });
+                    }}
+                    display={imagesLoaded["accenture-image"] ? "block" : "none"}
+                    className="work__experience-grid--image"
+                    src={AccentureLogo}
+                    alt="Accenture Logo"
+                  />
                   <Text className="work__experience-grid--text__p text-center">
                     Accenture <br/>
                     Advanced Application Engineering Senior Analyst (May 2022 - Current) <br/>
@@ -46,7 +72,22 @@ const WorkExperience = ({currentSection}: IWorkExperienceParameters) => {
             <Box className="flip-card-inner morph-bg">
               <Box className="flip-card-front d-flex justify-content-center align-items-center">
                 <Box>
-                  <Image className="work__experience-grid--image" src={KeybankLogo} alt="Keybank Logo"/>
+                  {!imagesLoaded["keybank-image"] &&
+                    <Box className="d-flex justify-content-center">
+                      <Spinner/>
+                    </Box>
+                  }
+                  <Image
+                    onLoad={() => {
+                      setImagesLoaded((loaded) => {
+                        return { ...loaded, "keybank-image": true };
+                      });
+                    }}
+                    display={imagesLoaded["keybank-image"] ? "block" : "none"}
+                    className="work__experience-grid--image"
+                    src={KeybankLogo}
+                    alt="Keybank Logo"
+                  />
                   <Text className="work__experience-grid--text__p text-center">
                     Keybank <br/>
                     Data Architect Intern (June 2020 - August 2020) <br/>
@@ -68,7 +109,22 @@ const WorkExperience = ({currentSection}: IWorkExperienceParameters) => {
             <Box className="flip-card-inner morph-bg">
               <Box className="flip-card-front d-flex justify-content-center align-items-center">
                 <Box>
-                  <Image className="work__experience-grid--image" src={CrestronLogo} alt="Crestron Logo"/>
+                  {!imagesLoaded["crestron-image"] &&
+                    <Box className="d-flex justify-content-center">
+                      <Spinner/>
+                    </Box>
+                  }
+                  <Image
+                    onLoad={() => {
+                      setImagesLoaded((loaded) => {
+                        return { ...loaded, "crestron-image": true };
+                      });
+                    }}
+                    display={imagesLoaded["crestron-image"] ? "block" : "none"}
+                    className="work__experience-grid--image"
+                    src={CrestronLogo}
+                    alt="Crestron Logo"
+                  />
                   <Text className="work__experience-grid--text__p text-center">
                     Crestron Electronics <br/>
                     Software Engineering Intern (January 2020 - June 2020) <br/>

@@ -2,8 +2,8 @@
   margin-left: 4.75vw;
   flex: 9;
   justify-content: flex-start;
-  align-items: flex-end;
-  -webkit-box-align: end;
+  align-items: center;
+  -webkit-box-align: center;
   -webkit-box-pack: start;
 }
 
@@ -11,8 +11,8 @@
   margin-right: 5vw;
   flex: 3;
   justify-content: flex-end;
-  align-items: flex-end;
-  -webkit-box-align: end;
+  align-items: center;
+  -webkit-box-align: center;
   -webkit-box-pack: start;
 }
 
@@ -44,16 +44,16 @@
 .navbar-color__switcher-flex {
   flex: 0.5;
   justify-content: flex-start;
-  align-items: flex-end;
-  -webkit-box-align: end;
+  align-items: center;
+  -webkit-box-align: center;
   -webkit-box-pack: start;
 }
 
 .navbar-menu-flex {
-  margin-left: 10vw;
+  margin-left: 5vw;
   flex: 9;
   justify-content: flex-start;
-  align-items: flex-end;
-  -webkit-box-align: end;
+  align-items: center;
+  -webkit-box-align: center;
   -webkit-box-pack: start;
 }

@@ -22,3 +22,9 @@
   font-weight: 400;
   align-self: center;
 }
+
+@media screen and (max-width: 750px) {
+  .education-section {
+    max-width: 90%;
+  }
+}

@@ -28,3 +28,9 @@
 .home-text__mb {
   margin-bottom: 1vh;
 }
+
+@media screen and (max-width: 750px) {
+  .home-occupations {
+    display: block;
+  }  
+}
