@@ -1,3 +1,4 @@
+import "./card.css";
 import { Box, Image, Flex, Link, Divider, Text, Center, Spacer, Badge, Button } from "@chakra-ui/react";
 
 interface ICardParameter {
@@ -28,36 +29,31 @@ const Card = ({
   }
 
   return (
-    <Box maxW="sm" borderWidth="2px" borderRadius="lg" borderColor="gray.500" overflow="hidden">
+    <Box className="card-container morph-bg">
       <Image src={property.imageUrl} alt={property.imageAlt} />
 
-      <Box p="4">
+      <Box className="card-container--padding">
         <Center>
           <Box
-            m="3"
-            fontSize="1.5rem"
-            fontWeight="semibold"
-            as="h4"
-            lineHeight="tight"
-            noOfLines={1}
+            className="card-title"
           >
             {property.title}
           </Box>
         </Center>
 
-        <Flex my="3">
+        <Flex className="card-content--my">
           <Text>Technologies:</Text>
           <Spacer/>
           {property.technologies
             .map((text, i) => (
-              <Badge key={i} borderRadius="full" px="2" colorScheme="teal">{text}</Badge>
+              <Badge key={i} className="card-technologies--badge" colorScheme="teal">{text}</Badge>
             ))}
         </Flex>
 
         <Divider/>
 
-        <Flex my="3">
-          <Link href="https://github.com/enbattle/pathfinding-visualizer" style={{ textDecoration: "none" }} isExternal>
+        <Flex className="card-content--my">
+          <Link className="card-link" href="https://github.com/enbattle/pathfinding-visualizer" isExternal>
             <Button colorScheme="purple">
               Go to source code
             </Button>
@@ -65,7 +61,7 @@ const Card = ({
 
           <Spacer/>
 
-          <Link href="https://enbattle.github.io/pathfinding-visualizer/" style={{ textDecoration: "none" }} isExternal>
+          <Link className="card-link" href="https://enbattle.github.io/pathfinding-visualizer/" isExternal>
           <Button colorScheme="cyan">
               Go to app site
             </Button>

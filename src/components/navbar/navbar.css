@@ -1,0 +1,59 @@
+.navbar-section-flex {
+  margin-left: 4.75vw;
+  flex: 9;
+  justify-content: flex-start;
+  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-box-pack: start;
+}
+
+.navbar-media-flex {
+  margin-right: 5vw;
+  flex: 3;
+  justify-content: flex-end;
+  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-box-pack: start;
+}
+
+.navbar-link:hover {
+  color: #E88702;
+  text-decoration: none;
+}
+
+.navbar-link {
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.navbar-link--text__home {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.navbar-link--text {
+  font-size: 1.5vw;
+  font-weight: 250;
+}
+
+.navbar-icon__media {
+  color: currentColor;
+  margin: 1rem;
+}
+
+.navbar-color__switcher-flex {
+  flex: 0.5;
+  justify-content: flex-start;
+  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-box-pack: start;
+}
+
+.navbar-menu-flex {
+  margin-left: 10vw;
+  flex: 9;
+  justify-content: flex-start;
+  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-box-pack: start;
+}

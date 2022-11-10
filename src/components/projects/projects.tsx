@@ -1,22 +1,21 @@
+import "./projects.css";
 import { 
   Box,
   SlideFade
 } from "@chakra-ui/react";
-import { SectionStyles } from "../App";
-import PathfindingVisualizer from "../assets/pathfinding-visualizer-project.png";
-import Card from "../util/card";
+import PathfindingVisualizer from "../../assets/pathfinding-visualizer-project.png";
+import Card from "../../util/card";
 
 interface IProjectParameters {
-  currentSection: string,
-  sectionStyles: SectionStyles
+  currentSection: string
 }
 
-const Projects = ({currentSection, sectionStyles}: IProjectParameters) => {
+const Projects = ({currentSection}: IProjectParameters) => {
   const shouldOpen = currentSection === "Projects" ? true : false;
 
   return ( 
     <SlideFade in={shouldOpen}>
-      <Box {...sectionStyles}>
+      <Box className="projects-section">
         <Card
           title={"Pathfinding Visualizer"}
           imageUrl={PathfindingVisualizer}

@@ -1,3 +1,4 @@
+import "./navbar.css";
 import React from "react";
 import { Flex, Box, Link, useColorModeValue, Text, Icon, IconButton,
   Menu,
@@ -5,30 +6,12 @@ import { Flex, Box, Link, useColorModeValue, Text, Icon, IconButton,
   MenuList,
   MenuItem
 } from "@chakra-ui/react";
-import { ColorModeSwitcher } from "../ColorModeSwitcher";
+import { ColorModeSwitcher } from "../../ColorModeSwitcher";
 import { AiFillMail, AiFillFacebook, AiFillGithub, AiFillLinkedin, AiOutlineMenu, AiFillProject, AiOutlineUser, AiFillHome } from "react-icons/ai";
 
 interface INavbarParameters {
   currentSection: string,
   setCurrentSection: (section: string) => void
-}
-
-const flexStyles = {
-  justify: "start",
-  align: "end"
-}
-
-const linkStyles = {
-  p: 2,
-  m: 2
-}
-
-const iconButtonStyles = {
-  size: "md",
-  fontSize: "lg",
-  variant: "ghost",
-  color:"current",
-  m: 3
 }
 
 const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
@@ -44,85 +27,85 @@ const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
       <Flex>
 
         {/* Home, Bio, and Work Experience Links (shown on bigger screens) */}
-        <Flex ml="4.75vw" flex={9} display={{ base: "none", md: "flex" }} {...flexStyles}>
+        <Flex className="navbar-section-flex" display={{ base: "none", md: "flex" }}>
           <Link
-            style={{textDecoration: "none"}}
+            className="navbar-link"
             onClick={(event) => toggleEvent(event, "Home")}
             rel="noopener noreferrer"
-            {...linkStyles}
           >
-            <Text fontSize="1.5vw" fontWeight={500}>About Me</Text>
+            <Text className="navbar-link--text__home">About Me</Text>
           </Link>
           <Link
-            _hover={{color: "#E88702"}}
+            className="navbar-link"
             onClick={(event) => toggleEvent(event, "Education")}
-            textDecoration={currentSection === "Education" ? "underline" : "none"}
+            color={currentSection === "Education" ? "#E88702" : "none"}
             rel="noopener noreferrer"
-            {...linkStyles}
           >
-            <Text fontSize="1.5vw" fontWeight={250}>Education</Text>
+            <Text className="navbar-link--text">Education</Text>
           </Link>
           <Link
-            _hover={{color: "#E88702"}}
+            className="navbar-link"
             onClick={(event) => toggleEvent(event, "WorkExperience")}
-            textDecoration={currentSection === "WorkExperience" ? "underline" : "none"}
+            color={currentSection === "WorkExperience" ? "#E88702" : "none"}
             rel="noopener noreferrer"
-            {...linkStyles}
           >
-            <Text fontSize={"1.5vw"} fontWeight={250}>Work Experience</Text>
+            <Text className="navbar-link--text">Work Experience</Text>
           </Link>
           <Link
-            _hover={{color: "#E88702"}}
+            className="navbar-link"
             onClick={(event) => toggleEvent(event, "Projects")}
-            textDecoration={currentSection === "Projects" ? "underline" : "none"}
+            color={currentSection === "Projects" ? "#E88702" : "none"}
             rel="noopener noreferrer"
-            {...linkStyles}
           >
-            <Text fontSize="1.5vw" fontWeight={250}>Projects</Text>
+            <Text className="navbar-link--text">Projects</Text>
           </Link>
         </Flex>
 
         {/* Contact Icons (shown on bigger screens) */}
-        <Flex mr="5vw" flex={3} display={{ base: "none", md: "flex" }} {...flexStyles}>
+        <Flex className="navbar-media-flex" display={{ base: "none", md: "flex" }}>
           <IconButton
-            {...iconButtonStyles}
+            className="navbar-icon__media wobble-vertical-on-hover"
             onClick={() => {
               window.open("mailto:listeven6691@gmail.com");
             }}
+            variant="ghost"
             aria-label={"Button that opens up default mail app to send an email to Steven"}
             icon={<Icon boxSize={6} as={AiFillMail}/>}
           />
 
           <IconButton
-            {...iconButtonStyles}
+            className="navbar-icon__media wobble-vertical-on-hover"
             aria-label={"Button that opens Steven's LinkedIn profile"}
             onClick={() => {
               window.open("https://www.linkedin.com/in/stevenli44");
             }}
+            variant="ghost"
             icon={<Icon boxSize={6} as={AiFillLinkedin}/>}
           />
 
           <IconButton
-            {...iconButtonStyles}
+            className="navbar-icon__media wobble-vertical-on-hover"
             aria-label={"Button that opens Steven's Facebook profile"}
             onClick={() => {
               window.open("https://www.facebook.com/stevenli44");
             }}
+            variant="ghost"
             icon={<Icon boxSize={6} as={AiFillFacebook}/>}
           />
 
           <IconButton
-            {...iconButtonStyles}
+            className="navbar-icon__media wobble-vertical-on-hover"
             aria-label={"Button that opens Steven's GitHub profile"}
             onClick={() => {
               window.open("https://www.github.com/enbattle");
             }}
+            variant="ghost"
             icon={<Icon boxSize={6} as={AiFillGithub}/>}
           />
         </Flex>
 
         {/* Small screen menu (replaces links and icons on small screens) */}
-        <Flex ml="10vw" flex={9} display={{ base: "inline-flex", md: "none" }} {...flexStyles}>
+        <Flex className="navbar-menu-flex" display={{ base: "inline-flex", md: "none" }}>
           <Menu>
             <MenuButton
               as={IconButton}
@@ -190,7 +173,7 @@ const Navbar = ({currentSection, setCurrentSection}: INavbarParameters) => {
         </Flex>
 
         {/* Color Theme Toggle (always shows) */}
-        <Flex flex={3} {...flexStyles}>
+        <Flex className="navbar-color__switcher-flex">
           <ColorModeSwitcher/>
         </Flex>
 

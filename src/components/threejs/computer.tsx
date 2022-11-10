@@ -211,7 +211,7 @@ const Computer = ({width, height}: IComputerParameters) => {
   // }, [renderer, handleWindowResize]);
 
   return (
-    <Box borderRadius="1rem" className="computer" ref={refContainer} h={height} w={width}></Box>
+    <Box ref={refContainer} h={height} w={width}></Box>
   );
 }
 

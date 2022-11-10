@@ -1,0 +1,30 @@
+.card-container {
+  max-width: 24rem;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  border-color: #718096;
+  overflow: hidden;
+}
+
+.card-container--padding {
+  padding: 1rem;
+}
+
+.card-title {
+  margin: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-content--my {
+  margin: 1rem 0 1rem 0;
+}
+
+.card-technologies--badge {
+  border-radius: 3rem;
+  padding: 0 0.5rem 0 0.5rem;
+}

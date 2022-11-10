@@ -1,13 +1,14 @@
-import { ColorModeScript, Box } from '@chakra-ui/react';
-import React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ColorModeScript, Box } from "@chakra-ui/react";
+import React from "react";
+import * as ReactDOM from "react-dom/client";
+import App from "./App";
+import "./App.css";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
-// If you use strict mode, it's useful in catching other bugs and issues, but causes react hooks to be called twice
+// If you use strict mode, it"s useful in catching other bugs and issues, but causes react hooks to be called twice
 root.render(
   // <StrictMode>
   <React.StrictMode>
