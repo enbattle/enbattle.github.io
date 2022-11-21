@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c72d0fb.css",
-    "main.js": "/static/js/main.97a2e018.js",
+    "main.css": "/static/css/main.90200a8f.css",
+    "main.js": "/static/js/main.54b53a65.js",
     "static/js/787.6db7c74c.chunk.js": "/static/js/787.6db7c74c.chunk.js",
     "static/media/pathfinding-visualizer-project.png": "/static/media/pathfinding-visualizer-project.e770de4dab3e28b9a03a.png",
     "static/media/rpi-icon.png": "/static/media/rpi-icon.65b9af22d28001f83f64.png",
     "static/media/rpi-quad-campus.jpg": "/static/media/rpi-quad-campus.7de60e658cf00ee61648.jpg",
     "static/media/crestron-logo.jpg": "/static/media/crestron-logo.3092dd35e3df66bf4229.jpg",
     "static/media/accenture-logo.jpg": "/static/media/accenture-logo.2727e78389ef4bf67363.jpg",
+    "static/media/scroll-animations.png": "/static/media/scroll-animations.bd30c2975184628f1683.png",
     "static/media/keybank-logo.jpg": "/static/media/keybank-logo.4c11a3951b3f107db239.jpg",
     "index.html": "/index.html",
-    "main.1c72d0fb.css.map": "/static/css/main.1c72d0fb.css.map",
-    "main.97a2e018.js.map": "/static/js/main.97a2e018.js.map",
+    "main.90200a8f.css.map": "/static/css/main.90200a8f.css.map",
+    "main.54b53a65.js.map": "/static/js/main.54b53a65.js.map",
     "787.6db7c74c.chunk.js.map": "/static/js/787.6db7c74c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c72d0fb.css",
-    "static/js/main.97a2e018.js"
+    "static/css/main.90200a8f.css",
+    "static/js/main.54b53a65.js"
   ]
 }
