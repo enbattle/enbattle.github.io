@@ -43,7 +43,7 @@
 .flip-card {
   margin: 3vh auto 3vh auto;
   width: 50%;
-  min-height: 40vh;
+  min-height: 60vh;
   text-align: center;
   grid-column: 1 / 13;
 }
@@ -76,6 +76,13 @@
 /* Style the back side */
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1000px) {
+  .flip-card {
+    width: 50%;
+    min-height: 75vh;
+  }
 }
 
 @media screen and (max-width: 750px) {

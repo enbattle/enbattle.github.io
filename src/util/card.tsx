@@ -30,7 +30,9 @@ const Card = ({
 
   return (
     <Box className="card-container morph-bg">
-      <Image src={property.imageUrl} alt={property.imageAlt} />
+      <Box className="card-image">
+        <Image className="card-image--image" src={property.imageUrl} alt={property.imageAlt} />
+      </Box>
 
       <Box className="card-container--padding">
         <Center>
