@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.90200a8f.css",
-    "main.js": "/static/js/main.54b53a65.js",
+    "main.js": "/static/js/main.79dd1520.js",
     "static/js/787.6db7c74c.chunk.js": "/static/js/787.6db7c74c.chunk.js",
     "static/media/pathfinding-visualizer-project.png": "/static/media/pathfinding-visualizer-project.e770de4dab3e28b9a03a.png",
     "static/media/rpi-icon.png": "/static/media/rpi-icon.65b9af22d28001f83f64.png",
@@ -12,11 +12,11 @@
     "static/media/keybank-logo.jpg": "/static/media/keybank-logo.4c11a3951b3f107db239.jpg",
     "index.html": "/index.html",
     "main.90200a8f.css.map": "/static/css/main.90200a8f.css.map",
-    "main.54b53a65.js.map": "/static/js/main.54b53a65.js.map",
+    "main.79dd1520.js.map": "/static/js/main.79dd1520.js.map",
     "787.6db7c74c.chunk.js.map": "/static/js/787.6db7c74c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.90200a8f.css",
-    "static/js/main.54b53a65.js"
+    "static/js/main.79dd1520.js"
   ]
 }
