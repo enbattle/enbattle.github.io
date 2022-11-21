@@ -55,7 +55,7 @@ const Card = ({
         <Divider/>
 
         <Flex className="card-content--my">
-          <Link className="card-link" href="https://github.com/enbattle/pathfinding-visualizer" isExternal>
+          <Link className="card-link" href={sourceCodeHref} isExternal>
             <Button colorScheme="purple">
               Go to source code
             </Button>
@@ -63,7 +63,7 @@ const Card = ({
 
           <Spacer/>
 
-          <Link className="card-link" href="https://enbattle.github.io/pathfinding-visualizer/" isExternal>
+          <Link className="card-link" href={appSiteHref} isExternal>
           <Button colorScheme="cyan">
               Go to app site
             </Button>
