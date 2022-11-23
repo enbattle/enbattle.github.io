@@ -2,10 +2,13 @@
   display: flex;
   margin: 5vh auto 5vh auto;
   width: 50%;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-section--project-margins {
-  margin-right: 1rem;
+  margin-right: 4rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -13,6 +16,9 @@
     display: block;
     margin: 5vh auto 5vh auto;
     max-width: 50%;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
   }
   
   .projects-section--project-margins {
