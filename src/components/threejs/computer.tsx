@@ -184,6 +184,7 @@ const Computer = ({width, height}: IComputerParameters) => {
 
       // Set up controls
       const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableZoom = false;
 
       const animate = () => {
         requestAnimationFrame(animate);

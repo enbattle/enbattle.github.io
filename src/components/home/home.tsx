@@ -18,10 +18,10 @@ const Home = ({currentSection}: IHomeParameters) => {
       <Box className="home-section">
         <Text className="home-name">Steven Li</Text>
         <Text className="home-occupations">
-          Developer <Icon as={MdComputer} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "greenyellow" }}/>
-          / Designer <Icon as={RiPencilRulerLine} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "greenyellow" }}/>
-          / Dancer <Icon as={GiMusicalNotes} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "greenyellow" }}/>
-          / Cook <Icon as={GiCookingPot} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "greenyellow" }}/>
+          Developer <Icon as={MdComputer} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "#FF5733" }}/>
+          / Designer <Icon as={RiPencilRulerLine} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "#FF5733" }}/>
+          / Dancer <Icon as={GiMusicalNotes} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "#FF5733" }}/>
+          / Cook <Icon as={GiCookingPot} className="wobble-vertical-on-hover" mx="0.5rem" color={ colorMode === "light" ? "#000000" : "#FFFFFF" } _hover={{ color: "#FF5733" }}/>
         </Text>
         <Text className="home-about">About Me</Text>
         <Text className="home-text home-text__mb">
@@ -32,9 +32,9 @@ const Home = ({currentSection}: IHomeParameters) => {
           left unturned, who can sit still?
         </Text>
         <Text className="home-text">
-          For hobbies, Steven enjoys finding new programming projects to work on, or finding ways to 
-          improve upon previous projects. In the outdoors, Steven enjoys playing basketball, volleyball, 
-          tennis, and the occasional running-while-listening-to-music. Coming into college, Steven had 
+          For hobbies, Steven enjoys finding new programming projects to work on, finding ways to 
+          improve upon previous projects, or exploring new technologies. In the outdoors, Steven enjoys playing basketball, volleyball, 
+          tennis, rock climbing, and the occasional running-while-listening-to-music. Coming into college, Steven had 
           joined a dance group and is now forever a fan of hip-hop and pop dances. Steven really loves 
           cooking, and he is trying out new flavor combinations and recipes in order to create good food 
           for himself, his family, and his friends.

@@ -1,5 +1,5 @@
 import "./education.css";
-import { Box, Text, SlideFade, Image, Spinner } from "@chakra-ui/react";
+import { Box, Text, SlideFade, Image, Spinner, Link } from "@chakra-ui/react";
 import RpiCampus from "../../assets/rpi-quad-campus.jpg";
 import RpiIcon from "../../assets/rpi-icon.png";
 import React from "react";
@@ -55,7 +55,7 @@ const Education = ({currentSection}: IEducationParameters) => {
           alt="RPI Banner"
         />
         <Text className="education-text">
-          Rensselaer Polytechnic Institute <br/>
+          <Link href="https://www.rpi.edu/" isExternal>Rensselaer Polytechnic Institute</Link> <br/>
           Bachelor of Science - B.S, Computer Science and Information Technology &amp; Web Science, Dual Major
         </Text>
       </Box>
