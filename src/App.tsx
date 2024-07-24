@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfileSection from "./components/profile/ProfileSection";
@@ -6,7 +5,6 @@ import EducationSection from "./components/education/EducationSection";
 import ProjectsSection from "./components/projects/ProjectsSection";
 import WorkExperienceSection from "./components/work-experience/WorkExperienceSection";
 import AboutMeSection from "./components/about-me/AboutMeSection";
-import GlobalStyles from "./styles/GlobalStyles";
 import Computer from "./components/threejs/Computer";
 
 const HomePage: React.FC = () => {
@@ -34,7 +32,6 @@ const HomePage: React.FC = () => {
         width: "100%",
       }}
     >
-      <GlobalStyles />
       <Computer />
       <AnimatePresence>
         {!isProfileExpanded && (
