@@ -7,8 +7,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   output: isProd ? "export" : undefined,
-  basePath: isProd ? "/enbattle.github.io" : "",
-  assetPrefix: isProd ? "/enbattle.github.io/" : "",
+  basePath: isProd ? "/my-website" : "",
+  assetPrefix: isProd ? "/my-website/" : "",
   trailingSlash: true,
 };
 
