@@ -6,12 +6,12 @@ const nextConfig = {
     styledComponents: true,
   },
   reactStrictMode: true,
-  // output: isProd ? "export" : undefined,
-  // basePath: isProd ? "/my-website" : "",
-  // assetPrefix: isProd ? "/my-website/" : "",
-  basePath: "",
-  assetPrefix: "",
   output: "export",
+  assetPrefix: "",
+  images: {
+    loader: "default",
+    path: "",
+  },
   trailingSlash: true,
 };
 
