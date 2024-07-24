@@ -1,4 +1,3 @@
-// app/components/EducationSection.tsx
 import React from "react";
 import NeomorphicCard from "../common/NeomorphicCard";
 import Button from "../common/ToggleButton";
