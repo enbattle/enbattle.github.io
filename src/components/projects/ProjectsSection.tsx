@@ -60,6 +60,13 @@ const ProjectsSection: React.FC<{
                 sourceCodeLink="https://github.com/enbattle/javascript-scroll-animations"
                 appLink="https://enbattle.github.io/javascript-scroll-animations/"
               />
+              <ProjectCard
+                imageSrc="./minimax-visualization-project.png"
+                title="Minimax Visualization"
+                technologies={["Angular", "Typescript"]}
+                sourceCodeLink="https://github.com/enbattle/minimax-visualization"
+                appLink="https://enbattle.github.io/minimax-visualization/"
+              />
             </NeomorphicCard>
           </motion.div>
         )}
