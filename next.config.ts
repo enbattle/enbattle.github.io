@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/enbattle.github.io",
-  assetPrefix: "/enbattle.github.io/",
+  basePath: "",
+  assetPrefix: "",
 };
 
 export default nextConfig;
