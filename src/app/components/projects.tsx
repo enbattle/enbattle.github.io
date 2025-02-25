@@ -13,7 +13,7 @@ export default function Projects() {
     {
       title: "Pathfinding Visualizer",
       description: "Visualizing the various pathfinder algorithms.",
-      image: "/pathfinding-visualizer-project.png",
+      image: "./pathfinding-visualizer-project.png",
       tags: ["React", "Typescript"],
       link: "https://enbattle.github.io/pathfinding-visualizer/",
       github: "https://github.com/enbattle/pathfinding-visualizer",
@@ -22,7 +22,7 @@ export default function Projects() {
       title: "JavaScript Modern Scroll Animations",
       description:
         "Working with cool scroll animations that can used on various projects.",
-      image: "/scroll-animations-project.png",
+      image: "./scroll-animations-project.png",
       tags: ["SolidJS", "Typescript"],
       link: "https://enbattle.github.io/javascript-scroll-animations/",
       github: "https://github.com/enbattle/javascript-scroll-animations",
@@ -30,7 +30,7 @@ export default function Projects() {
     {
       title: "Tic-Tac-Toe and Gomoku",
       description: "Visualizing the minimax algorithm.",
-      image: "/minimax-visualization-project.png",
+      image: "./minimax-visualization-project.png",
       tags: ["Angular", "Typescript"],
       link: "https://enbattle.github.io/minimax-visualization/",
       github: "https://github.com/enbattle/minimax-visualization",

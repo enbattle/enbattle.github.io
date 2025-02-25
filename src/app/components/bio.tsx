@@ -170,7 +170,7 @@ export default function Bio() {
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 z-10 mix-blend-overlay"></div>
         <div className="absolute inset-0 border border-white/10 z-20 rounded-lg"></div>
         <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black relative">
-          {/* Placeholder for profile image */}
+          {/* Placeholder for profile image
           <div className="absolute inset-0 flex items-center justify-center text-purple-400 opacity-40">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -187,8 +187,9 @@ export default function Bio() {
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
+          */}
           <Image
-            src="/profile.png"
+            src="./profile.png"
             alt="Your Name"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
