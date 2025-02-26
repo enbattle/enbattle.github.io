@@ -65,7 +65,7 @@ export default function Bio() {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           {`I'm a software engineer specializing in building exceptional digital
-          experiences and applications. I love to rock climb, play tennis, and dance. Oh, and I also love food. `}
+          experiences and applications. My hobbies are rock climbing, tennis, and dance. I absolutely love corgis. Oh, and I also love food, especially sushi. `}
         </motion.p>
 
         <motion.div
@@ -169,27 +169,9 @@ export default function Bio() {
         <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 z-10 mix-blend-overlay"></div>
         <div className="absolute inset-0 border border-white/10 z-20 rounded-lg"></div>
         <div className="w-full h-full bg-gradient-to-br from-gray-900 to-black relative">
-          {/* Placeholder for profile image
-          <div className="absolute inset-0 flex items-center justify-center text-purple-400 opacity-40">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="120"
-              height="120"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          */}
           <Image
-            src="./profile.png"
-            alt="Your Name"
+            src="./profile.jpeg"
+            alt="A lovely corgi sitting on the grass."
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: "cover" }}
@@ -197,8 +179,8 @@ export default function Bio() {
           />
 
           {/* Decorative elements */}
-          <div className="absolute top-4 left-4 w-20 h-20 border border-purple-500/20 rounded-full"></div>
-          <div className="absolute bottom-8 right-8 w-32 h-32 border border-blue-500/20 rounded-full"></div>
+          {/* <div className="absolute top-4 left-4 w-20 h-20 border border-purple-500/20 rounded-full"></div>
+          <div className="absolute bottom-8 right-8 w-32 h-32 border border-blue-500/20 rounded-full"></div> */}
         </div>
       </motion.div>
     </motion.div>
