@@ -48,8 +48,7 @@ export default function Bio() {
       transition={{ duration: 0.8 }}
     >
       <motion.div style={{ y }} className="space-y-6">
-        <div className="h-32">
-          {" "}
+        <div className="sm:h-24 lg:h-12">
           {/* Increased height from h-24 to h-32 */}
           <h1 className="text-5xl font-light text-white">
             {displayedText}
@@ -60,13 +59,13 @@ export default function Bio() {
         </div>
 
         <motion.p
-          className="text-lg text-gray-300 leading-relaxed mt-4" /* Added mt-4 margin top */
+          className="text-lg text-gray-300 leading-relaxed mt-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: isTyping ? 0 : 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           {`I'm a software engineer specializing in building exceptional digital
-          experiences and applications.`}
+          experiences and applications. I love to rock climb, play tennis, and dance. Oh, and I also love food. `}
         </motion.p>
 
         <motion.div

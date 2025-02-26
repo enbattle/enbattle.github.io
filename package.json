@@ -7,7 +7,7 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
-    "deploy": "npm run build && touch out/.nojekyll && npx gh-pages -d out"
+    "deploy": "npm run build && node deploy.js"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.2",
