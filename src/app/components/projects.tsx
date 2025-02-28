@@ -11,6 +11,23 @@ export default function Projects() {
   // Projects data
   const projects = [
     {
+      title: "Vitality Ecommerce Store Visualization",
+      description:
+        "Visualizing a good example of an ecommerce platform and business",
+      image: "./vitality.png",
+      tags: ["React", "Next.js", "Typescript"],
+      link: "https://enbattle.github.io/vitality/",
+      github: "https://github.com/enbattle/vitality",
+    },
+    {
+      title: "Board Games - Nine Men's Morris, Gomoku",
+      description: "Classic board games with a touch of minimax algorithms",
+      image: "./board-games.png",
+      tags: ["React", "Next.js", "Typescript"],
+      link: "https://enbattle.github.io/board-games/",
+      github: "https://github.com/enbattle/board-games",
+    },
+    {
       title: "Pathfinding Visualizer",
       description: "Visualizing the various pathfinder algorithms.",
       image: "./pathfinding-visualizer-project.png",
@@ -26,14 +43,6 @@ export default function Projects() {
       tags: ["SolidJS", "Typescript"],
       link: "https://enbattle.github.io/javascript-scroll-animations/",
       github: "https://github.com/enbattle/javascript-scroll-animations",
-    },
-    {
-      title: "Tic-Tac-Toe and Gomoku",
-      description: "Visualizing the minimax algorithm.",
-      image: "./minimax-visualization-project.png",
-      tags: ["Angular", "Typescript"],
-      link: "https://enbattle.github.io/minimax-visualization/",
-      github: "https://github.com/enbattle/minimax-visualization",
     },
   ];
 
