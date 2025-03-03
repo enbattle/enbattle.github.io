@@ -11,6 +11,15 @@ export default function Projects() {
   // Projects data
   const projects = [
     {
+      title: "Subtrackar Subscription Tracking Dashboard Visualization",
+      description:
+        "Visualizing a good example of a subscription tracker dashboard",
+      image: "./subtrackar.png",
+      tags: ["React", "Next.js", "Typescript"],
+      link: "https://enbattle.github.io/subtrackar/",
+      github: "https://github.com/enbattle/subtrackar",
+    },
+    {
       title: "Vitality Ecommerce Store Visualization",
       description:
         "Visualizing a good example of an ecommerce platform and business",
