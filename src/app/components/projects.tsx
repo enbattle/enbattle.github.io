@@ -29,6 +29,14 @@ export default function Projects() {
       github: "https://github.com/enbattle/vitality",
     },
     {
+      title: "Pixel Platformer",
+      description: "Fun little game based off of 'I Wanna Be That Guy'",
+      image: "./pixel-platformer.png",
+      tags: ["React", "Next.js", "Typescript"],
+      link: "https://enbattle.github.io/pixel-platformer/",
+      github: "https://github.com/enbattle/pixel-platformer",
+    },
+    {
       title: "Board Games - Nine Men's Morris, Gomoku",
       description: "Classic board games with a touch of minimax algorithms",
       image: "./board-games.png",
