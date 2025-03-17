@@ -85,7 +85,7 @@ export default function Contact() {
               <CardHeader className="text-center">
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>
-                  I'm always open to new opportunities and collaborations
+                  {`I'm always open to new opportunities and collaborations`}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-8">

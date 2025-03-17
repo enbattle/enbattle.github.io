@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { GraduationCap, Award, Calendar } from "lucide-react";
+import { GraduationCap, Calendar } from "lucide-react";
 
 export default function Education() {
   const [ref, inView] = useInView({

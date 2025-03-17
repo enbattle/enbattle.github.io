@@ -12,7 +12,7 @@ import { Moon, Sun, Laptop } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme(); // Removed the unused 'theme' variable
   const [mounted, setMounted] = useState(false);
 
   // Avoid hydration mismatch by only rendering after mount
