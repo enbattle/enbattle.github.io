@@ -82,12 +82,12 @@ export default function Contact() {
 
           <motion.div variants={itemVariants}>
             <Card className="overflow-hidden">
-              <CardHeader className="text-center">
+              {/**<CardHeader className="text-center">
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>
                   {`I'm always open to new opportunities and collaborations`}
                 </CardDescription>
-              </CardHeader>
+              </CardHeader>**/}
               <CardContent className="space-y-8">
                 {/* Contact Info */}
                 <div className="flex flex-col items-center space-y-6">
