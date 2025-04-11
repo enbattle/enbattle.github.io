@@ -4,9 +4,9 @@ import { useInView } from "react-intersection-observer";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  // CardDescription,
+  // CardHeader,
+  // CardTitle,
 } from "@/components/ui/card";
 import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import React from "react";
 
@@ -264,10 +264,10 @@ export default function SceneWrapper() {
 
   // Define the texts to cycle through
   const roleTexts = [
-    "Software Engineer and Developer.",
-    "Rock Climber.",
-    "Food Lover.",
-    "Tennis Player.",
+    "I'm a Software Engineer and Developer!",
+    "I'm a rock climber!",
+    "I'm a foodie!",
+    "I'm a tennis player!",
   ];
   const currentRole = useTypingAnimation(roleTexts);
 
