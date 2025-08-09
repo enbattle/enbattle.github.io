@@ -39,7 +39,7 @@ export default function Bio() {
       icon: <Code className="h-8 w-8 mb-2" />,
       title: "Full Stack Development",
       description:
-        "TypeScript, React, Next.js, Angular, Node.js, Python, Java, SQL, PostgreSQL, GraphQL, MongoDB",
+        "TypeScript, React, Next.js, Angular, Node.js, Python, Java, SQL, PostgreSQL, GraphQL, MongoDB, CosmosDB, DynamoDB",
     },
     {
       icon: <Palette className="h-8 w-8 mb-2" />,
@@ -49,7 +49,7 @@ export default function Bio() {
     {
       icon: <Palette className="h-8 w-8 mb-2" />,
       title: "AI",
-      description: "LLM integration, Agentic AI workflows, MCP utilization",
+      description: "LLM API Integration, Agentic AI workflows, RAG",
     },
     {
       icon: <Lightbulb className="h-8 w-8 mb-2" />,

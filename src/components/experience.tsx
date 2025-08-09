@@ -41,68 +41,74 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "Full Stack Engineering Lead",
       company: "Accenture",
-      period: "2024 - Present",
-      description: `
-        Lead a team of engineers to develop and deploy a gamification learning engine integrated with growth tracking systems for both internal groups and external clients
-        •
-        Spearhead frontend development for client-focused UI/UX features including learning progression, leaderboards, badges, and gamified questions/quizzes
-        •
-        Architect backend solutions focusing on API endpoints, event analytics, SQL/NoSQL database storage, and AI-powered LLM and OpenAI integration for learning assistance
-        •
-        Partner with internal upskilling teams to implement the gamification learning engine for over 1,000 users across seminars and instructor-led courses, enabling seamless API integration with existing training platforms
-        •
-        Serve as Senior Instructor/Coordinator for full-stack engineering courses, mentoring peers and strengthening the engineering community
-        •
-        Teach software engineering as Senior Instructor for frontend and backend technologies including Vanilla JavaScript, React, Angular, Node.js, AWS and Microsoft Azure database servers, database storage, and data retrieval
-      `,
-      skills: [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Node.js",
-        "MySQL",
-        "CosmosDB",
-        "Microsoft Azure",
+      period: "2021 - Present",
+      positions: [
+        {
+          title: "Full Stack Engineering Lead",
+          period: "2024 - Present",
+          description: [
+            "Manage team of engineers to build enterprise-scale event tracking platform monitoring 30+ critical applications to identify and resolve customer experience bottlenecks in real-time",
+            "Lead a team of engineers to develop and deploy a gamification learning engine scaled to over 1000+ internal users across seminars and instructor-led courses, enabling seamless API integration with existing training platforms",
+            "Teach software engineering as Senior Instructor for frontend and backend technologies to over 200+ students and provided onboarding and mentoring to 30+ instructors in the engineering program",
+          ],
+          skills: [
+            "React",
+            "TypeScript",
+            "Next.js",
+            "Node.js",
+            "MySQL",
+            "CosmosDB",
+            "Microsoft Azure",
+          ],
+        },
+        {
+          title: "Back-end Senior Engineer",
+          period: "2023 - 2024",
+          description: [
+            "Enhance e-commerce presence for a major brand by developing and deploying 50+ production-ready APIs with comprehensive testing and documentation along with a formal integration to the existing platform",
+          ],
+          skills: [
+            "React",
+            "TypeScript",
+            "Microsoft Azure",
+            "Apollo GraphQL",
+            "GraphQL",
+          ],
+        },
+        {
+          title: "Front-end Engineer",
+          period: "2021 - 2023",
+          description: [
+            "Modernize a desktop application for an investment firm, increasing service delivery speed by 40% while implementing robust SDK integration for streamlined authentication and efficient searching with intuitive navigation",
+            "Developed comparative proof-of-concept applications using Glue42 and Openfin, conducting performance benchmarking across scalability, reliability, and cost metrics that enabled client to make data-driven vendor selection, resulting in annual savings on technology contracts",
+          ],
+          skills: [
+            "Angular",
+            "TypeScript",
+            "Node.js",
+            "Electron",
+            "Glue42",
+            "Microsoft Azure",
+          ],
+        },
       ],
     },
     {
-      title: "Back-end Engineer",
-      company: "Accenture",
-      period: "2023 - 2024",
-      description: `
-        Enhance e-commerce presence for a major brand by developing and deploying 50+ production-ready APIs with comprehensive testing
-      `,
-      skills: [
-        "React",
-        "TypeScript",
-        "Microsoft Azure",
-        "Apollo GraphQL",
-        "GraphQL",
-      ],
-    },
-    {
-      title: "Front-end Engineer",
-      company: "Accenture",
-      period: "2021 - 2023",
-      description: `
-        Modernize a desktop application for an investment firm, increasing service delivery speed while implementing robust SDK integration for streamlined authentication and efficient searching with intuitive navigation
-      `,
-      skills: ["Angular", "TypeScript", "Node.js", "Electron", "Glue42"],
-    },
-    {
-      title: "Software Engineering Intern",
-      company: "Digital Agency",
+      company: "Crestron Electronics",
       period: "2020 - 2020",
-      description: `
-        Developed efficient smart home drivers in C# for latest audiovisual systems, TVs, and security systems integrated with Crestron's control platforms
-        •
-        Examined codebase quality using the company's Java/C# framework and supported the security test environment
-        •
-        Collaborated with quality engineering teams on regression testing and analysis for smart home drivers and control systems pre-release
-      `,
-      skills: ["C#"],
+      positions: [
+        {
+          title: "Software Engineering Intern",
+          period: "2020 - 2020",
+          description: [
+            "Developed efficient smart home drivers in C# for latest audiovisual systems, TVs, and security systems integrated with Crestron's control platforms",
+            "Examined codebase quality using the company's Java/C# framework and supported the security test environment",
+            "Collaborated with quality engineering teams on regression testing and analysis for smart home drivers and control systems pre-release",
+          ],
+          skills: ["C#"],
+        },
+      ],
     },
   ];
 
@@ -134,23 +140,48 @@ export default function Experience() {
                       <div>
                         <CardTitle className="flex items-center">
                           <Briefcase className="mr-2 h-5 w-5 text-primary" />
-                          {exp.title}
+                          {exp.company}
                         </CardTitle>
                         <CardDescription className="mt-1">
-                          {exp.company} • {exp.period}
+                          {exp.period}
                         </CardDescription>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="mb-4 text-muted-foreground">
-                      {exp.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.skills.map((skill, i) => (
-                        <Badge key={i} variant="secondary">
-                          {skill}
-                        </Badge>
+                    <div className="space-y-6">
+                      {exp.positions.map((position, positionIndex) => (
+                        <div
+                          key={positionIndex}
+                          className={positionIndex > 0 ? "border-t pt-6" : ""}
+                        >
+                          <div className="mb-3">
+                            <h4 className="font-semibold text-foreground">
+                              {position.title}
+                            </h4>
+                            <p className="text-sm text-muted-foreground">
+                              {position.period}
+                            </p>
+                          </div>
+                          <ul className="mb-4 space-y-2 text-muted-foreground">
+                            {position.description.map((bullet, bulletIndex) => (
+                              <li
+                                key={bulletIndex}
+                                className="flex items-start"
+                              >
+                                <span className="inline-block w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span>{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
+                          <div className="flex flex-wrap gap-2">
+                            {position.skills.map((skill, i) => (
+                              <Badge key={i} variant="secondary">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </CardContent>
