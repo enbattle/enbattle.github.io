@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
 import { ArrowUpRight, Github } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 
@@ -11,7 +10,6 @@ const projects = [
     index: "01",
     title: "Pathfinding Visualizer",
     description: "An interactive look at how Dijkstra, A*, and friends search a grid for the shortest route — the same engine behind this page's hero.",
-    image: "/pathfinding-visualizer-project.png",
     tags: ["React", "TypeScript"],
     liveUrl: "https://enbattle.github.io/pathfinding-visualizer/",
     githubUrl: "https://github.com/enbattle/pathfinding-visualizer",
@@ -20,7 +18,6 @@ const projects = [
     index: "02",
     title: "Board Games",
     description: "Nine Men's Morris and Gomoku, playable in-browser with a minimax opponent.",
-    image: "/board-games.png",
     tags: ["React", "Next.js", "TypeScript"],
     liveUrl: "https://enbattle.github.io/board-games/",
     githubUrl: "https://github.com/enbattle/board-games",
@@ -48,7 +45,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.06 * i }}
-              className="group relative grid grid-cols-1 items-center gap-4 overflow-hidden border-t border-border py-8 last:border-b md:grid-cols-[3rem_1fr_9rem_9rem]"
+              className="group grid grid-cols-1 items-center gap-4 border-t border-border py-8 last:border-b md:grid-cols-[3rem_1fr_9rem_9rem]"
             >
               <span className="font-mono text-xs text-muted-foreground">
                 {project.index}
@@ -79,15 +76,6 @@ export default function Projects() {
               >
                 <Github className="h-3.5 w-3.5" /> Source
               </a>
-
-              <div className="pointer-events-none absolute right-4 top-1/2 hidden h-32 w-48 -translate-y-1/2 scale-95 overflow-hidden border border-border bg-background opacity-0 shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 lg:block">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </motion.a>
           ))}
         </div>
