@@ -2,103 +2,46 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { GraduationCap, Calendar } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
+
+const education = [
+  {
+    degree: "B.S. Computer Science & B.S. Information Technology and Web Science",
+    institution: "Rensselaer Polytechnic Institute",
+    period: "2017 — 2021",
+  },
+];
 
 export default function Education() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const education = [
-    {
-      degree: "Bachelor of Science (BS) in Computer Science",
-      institution: "Rensselaer Polytechnic Institute",
-      period: "2017 - 2021",
-      description:
-        "Focused on data structures, algorithms, and machine learning",
-    },
-    {
-      degree:
-        "Bachelor of Science (BS) in Information Technology and Web Science",
-      institution: "Rensselaer Polytechnic Institute",
-      period: "2017 - 2021",
-      description:
-        "Focused on web development, project management, and technological case studies",
-    },
-  ];
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="education" className="py-20 px-4 bg-muted/50">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="space-y-12"
-        >
-          <motion.div variants={itemVariants} className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Education</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              My academic background that has shaped my expertise.
-            </p>
-          </motion.div>
+    <section
+      id="education"
+      className="border-t border-border px-6 py-24 md:px-16"
+    >
+      <div ref={ref} className="mx-auto max-w-5xl">
+        <SectionHeading index="04" title="Education" />
 
-          <div className="space-y-8">
-            <motion.h3
-              variants={itemVariants}
-              className="text-2xl font-semibold flex items-center"
+        <div className="space-y-8">
+          {education.map((edu, i) => (
+            <motion.div
+              key={edu.degree}
+              initial={{ opacity: 0, y: 12 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 * i }}
+              className="grid gap-2 border-t border-border pt-6 first:border-t-0 first:pt-0 md:grid-cols-[220px_1fr]"
             >
-              <GraduationCap className="mr-2 h-6 w-6 text-primary" /> Education
-            </motion.h3>
-
-            {education.map((edu, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>{edu.degree}</CardTitle>
-                    <CardDescription className="flex items-center">
-                      <Calendar className="mr-2 h-4 w-4" /> {edu.period} •{" "}
-                      {edu.institution}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{edu.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              <p className="font-mono text-xs text-muted-foreground">
+                {edu.period}
+              </p>
+              <div>
+                <h3 className="font-display text-2xl">{edu.degree}</h3>
+                <p className="mt-1 text-muted-foreground">{edu.institution}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

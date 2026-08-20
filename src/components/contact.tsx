@@ -1,141 +1,45 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  Card,
-  CardContent,
-  // CardDescription,
-  // CardHeader,
-  // CardTitle,
-} from "@/components/ui/card";
-import { Mail, Github, Linkedin, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
 
 export default function Contact() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const contactInfo = [
-    {
-      icon: <Mail className="h-5 w-5" />,
-      text: "listeven6691@gmail.com",
-      href: "mailto:listeven6691@gmail.com",
-    },
-    {
-      icon: <MapPin className="h-5 w-5" />,
-      text: "New York City, NY",
-      href: "https://maps.google.com/?q=New+York+City,+NY",
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: <Github className="h-6 w-6" />,
-      url: "https://github.com/enbattle",
-      label: "GitHub",
-    },
-    {
-      icon: <Linkedin className="h-6 w-6" />,
-      url: "https://linkedin.com/in/stevenli44",
-      label: "LinkedIn",
-    },
-  ];
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="container mx-auto max-w-2xl">
+    <section
+      id="contact"
+      className="border-t border-border px-6 py-24 md:px-16"
+    >
+      <div ref={ref} className="mx-auto max-w-5xl">
+        <SectionHeading index="05" title="Contact" />
+
         <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="space-y-12"
+          initial={{ opacity: 0, y: 12 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
         >
-          <motion.div variants={itemVariants} className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Contact</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Feel free to reach out!
-            </p>
-          </motion.div>
+          <p className="max-w-lg text-muted-foreground">
+            Open to new opportunities and collaborations &mdash; the fastest
+            way to reach me is email.
+          </p>
 
-          <motion.div variants={itemVariants}>
-            <Card className="overflow-hidden">
-              {/**<CardHeader className="text-center">
-                <CardTitle>Contact Information</CardTitle>
-                <CardDescription>
-                  {`I'm always open to new opportunities and collaborations`}
-                </CardDescription>
-              </CardHeader>**/}
-              <CardContent className="space-y-8">
-                {/* Contact Info */}
-                <div className="flex flex-col items-center space-y-6">
-                  {contactInfo.map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-3 p-4 rounded-lg hover:bg-muted transition-colors w-full max-w-xs justify-center"
-                    >
-                      <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary">
-                        {item.icon}
-                      </div>
-                      <span>{item.text}</span>
-                    </a>
-                  ))}
-                </div>
+          <a
+            href="mailto:listeven6691@gmail.com"
+            className="group mt-8 inline-block font-display text-4xl leading-tight sm:text-5xl md:text-6xl"
+          >
+            listeven6691
+            <span className="text-rust">@</span>gmail.com
+            <span className="mt-2 block h-px w-0 bg-rust transition-all duration-500 group-hover:w-full" />
+          </a>
 
-                {/* Social Links */}
-                <div className="pt-6 border-t">
-                  <h4 className="text-sm font-medium mb-6 text-center">
-                    Connect with me
-                  </h4>
-                  <div className="flex justify-center space-x-12">
-                    {socialLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center space-y-2 group"
-                      >
-                        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-muted group-hover:bg-primary/10 transition-colors">
-                          <div className="text-muted-foreground group-hover:text-primary transition-colors">
-                            {link.icon}
-                          </div>
-                        </div>
-                        <span className="text-sm font-medium">
-                          {link.label}
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+          <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4">
+            <span className="flex items-center gap-2 font-mono text-xs uppercase tracking-wide text-muted-foreground">
+              <MapPin className="h-3.5 w-3.5" /> New York City, NY
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

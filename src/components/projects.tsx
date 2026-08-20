@@ -1,162 +1,96 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
+
+const projects = [
+  {
+    index: "01",
+    title: "Pathfinding Visualizer",
+    description: "An interactive look at how Dijkstra, A*, and friends search a grid for the shortest route — the same engine behind this page's hero.",
+    image: "/pathfinding-visualizer-project.png",
+    tags: ["React", "TypeScript"],
+    liveUrl: "https://enbattle.github.io/pathfinding-visualizer/",
+    githubUrl: "https://github.com/enbattle/pathfinding-visualizer",
+  },
+  {
+    index: "02",
+    title: "Board Games",
+    description: "Nine Men's Morris and Gomoku, playable in-browser with a minimax opponent.",
+    image: "/board-games.png",
+    tags: ["React", "Next.js", "TypeScript"],
+    liveUrl: "https://enbattle.github.io/board-games/",
+    githubUrl: "https://github.com/enbattle/board-games",
+  },
+];
 
 export default function Projects() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const projects = [
-    {
-      title: "Subtrackar Subscription Tracking Dashboard Visualization",
-      description:
-        "Visualizing a good example of a subscription tracker dashboard",
-      image: "./subtrackar.png",
-      tags: ["React", "Next.js", "Typescript"],
-      liveUrl: "https://enbattle.github.io/subtrackar/",
-      githubUrl: "https://github.com/enbattle/subtrackar",
-    },
-    {
-      title: "Vitality Ecommerce Store Visualization",
-      description:
-        "Visualizing a good example of an ecommerce platform and business",
-      image: "./vitality.png",
-      tags: ["React", "Next.js", "Typescript"],
-      liveUrl: "https://enbattle.github.io/vitality/",
-      githubUrl: "https://github.com/enbattle/vitality",
-    },
-    {
-      title: "Pixel Platformer",
-      description: "Fun little game based off of 'I Wanna Be That Guy'",
-      image: "./pixel-platformer.png",
-      tags: ["React", "Next.js", "Typescript"],
-      liveUrl: "https://enbattle.github.io/pixel-platformer/",
-      githubUrl: "https://github.com/enbattle/pixel-platformer",
-    },
-    {
-      title: "Board Games - Nine Men's Morris, Gomoku",
-      description: "Classic board games with a touch of minimax algorithms",
-      image: "./board-games.png",
-      tags: ["React", "Next.js", "Typescript"],
-      liveUrl: "https://enbattle.github.io/board-games/",
-      githubUrl: "https://github.com/enbattle/board-games",
-    },
-    {
-      title: "Pathfinding Visualizer",
-      description: "Visualizing the various pathfinder algorithms.",
-      image: "./pathfinding-visualizer-project.png",
-      tags: ["React", "Typescript"],
-      liveUrl: "https://enbattle.github.io/pathfinding-visualizer/",
-      githubUrl: "https://github.com/enbattle/pathfinding-visualizer",
-    },
-  ];
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="projects" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          className="space-y-12"
-        >
-          <motion.div variants={itemVariants} className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Projects</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Here are some of my recent projects.
-            </p>
-          </motion.div>
+    <section
+      id="projects"
+      className="border-t border-border px-6 py-24 md:px-16"
+    >
+      <div ref={ref} className="mx-auto max-w-5xl">
+        <SectionHeading index="03" title="Projects" />
 
-          <motion.div
-            variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          >
-            {projects.map((project, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col">
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  <CardHeader className="pb-2">
-                    <CardTitle>{project.title}</CardTitle>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {project.tags.map((tag, i) => (
-                        <Badge key={i} variant="secondary" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">
-                      {project.description}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="flex justify-between">
-                    <Button variant="outline" size="sm" asChild>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" /> Code
-                      </a>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                      </a>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+        <div>
+          {projects.map((project, i) => (
+            <motion.a
+              key={project.title}
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 12 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.06 * i }}
+              className="group relative grid grid-cols-1 items-center gap-4 overflow-hidden border-t border-border py-8 last:border-b md:grid-cols-[3rem_1fr_9rem_9rem]"
+            >
+              <span className="font-mono text-xs text-muted-foreground">
+                {project.index}
+              </span>
+
+              <div>
+                <h3 className="flex items-center gap-2 font-display text-2xl transition-colors group-hover:text-rust md:text-3xl">
+                  {project.title}
+                  <ArrowUpRight className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100" />
+                </h3>
+                <p className="mt-2 max-w-md text-sm text-muted-foreground">
+                  {project.description}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-foreground/60">
+                {project.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="flex items-center gap-1.5 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground md:justify-self-end"
+              >
+                <Github className="h-3.5 w-3.5" /> Source
+              </a>
+
+              <div className="pointer-events-none absolute right-4 top-1/2 hidden h-32 w-48 -translate-y-1/2 scale-95 overflow-hidden border border-border bg-background opacity-0 shadow-lg transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 lg:block">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.a>
+          ))}
+        </div>
       </div>
     </section>
   );
