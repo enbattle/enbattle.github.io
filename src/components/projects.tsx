@@ -8,14 +8,6 @@ import { SectionHeading } from "@/components/section-heading";
 const projects = [
   {
     index: "01",
-    title: "AI Cauldron",
-    description: "An interactive reference for the full AI engineering stack — LLM internals, RAG, agents, evals, MLOps — with 96 lessons and 10 animated algorithm visualizations.",
-    tags: ["React", "TypeScript", "Vite"],
-    liveUrl: "https://enbattle.github.io/ai-cauldron/",
-    githubUrl: "https://github.com/enbattle/ai-cauldron",
-  },
-  {
-    index: "02",
     title: "Coding Playground",
     description: "A TypeScript-first in-browser code editor and studio — Monaco editor, client-side compilation, sandboxed console, no backend.",
     tags: ["React", "TypeScript", "Monaco"],
@@ -23,7 +15,7 @@ const projects = [
     githubUrl: "https://github.com/enbattle/coding-playground",
   },
   {
-    index: "03",
+    index: "02",
     title: "Dev Nuggets",
     description: "A searchable, no-backend reference site for programming concepts, patterns, and gotchas worth remembering — content lives in the codebase like a small wiki.",
     tags: ["React", "TypeScript", "Vite"],
@@ -31,7 +23,7 @@ const projects = [
     githubUrl: "https://github.com/enbattle/develop-nuggets",
   },
     {
-    index: "04",
+    index: "03",
     title: "Pathfinding Visualizer",
     description: "An interactive look at how Dijkstra, A*, and friends search a grid for the shortest route — the same engine behind this page's hero.",
     tags: ["React", "TypeScript"],
@@ -39,7 +31,7 @@ const projects = [
     githubUrl: "https://github.com/enbattle/pathfinding-visualizer",
   },
   {
-    index: "05",
+    index: "04",
     title: "Board Games",
     description: "Nine Men's Morris and Gomoku, playable in-browser with a minimax opponent.",
     tags: ["React", "Next.js", "TypeScript"],
