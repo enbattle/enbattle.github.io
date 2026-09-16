@@ -16,11 +16,11 @@ const projects = [
   },
   {
     index: "02",
-    title: "Dev Nuggets",
-    description: "A searchable, no-backend reference site for programming concepts, patterns, and gotchas worth remembering — content lives in the codebase like a small wiki.",
+    title: "til — Today I Learned",
+    description: "A searchable, no-backend reference site for programming and systems concepts, patterns, and gotchas worth remembering — content lives in the codebase like a small wiki.",
     tags: ["React", "TypeScript", "Vite"],
-    liveUrl: "https://enbattle.github.io/develop-nuggets/",
-    githubUrl: "https://github.com/enbattle/develop-nuggets",
+    liveUrl: "https://enbattle.github.io/til/",
+    githubUrl: "https://github.com/enbattle/til",
   },
     {
     index: "03",
