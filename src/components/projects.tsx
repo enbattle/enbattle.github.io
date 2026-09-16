@@ -26,7 +26,7 @@ const projects = [
     index: "03",
     title: "Pathfinding Visualizer",
     description: "An interactive look at how Dijkstra, A*, and friends search a grid for the shortest route — the same engine behind this page's hero.",
-    tags: ["React", "TypeScript"],
+    tags: ["React", "TypeScript", "Vite"],
     liveUrl: "https://enbattle.github.io/pathfinding-visualizer/",
     githubUrl: "https://github.com/enbattle/pathfinding-visualizer",
   },
