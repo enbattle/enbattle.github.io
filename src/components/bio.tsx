@@ -8,11 +8,11 @@ const skills = [
   {
     title: "Full Stack",
     description:
-      "TypeScript · React · Next.js · Angular · Node.js · Python · Java · SQL · PostgreSQL · GraphQL · MongoDB",
+      "TypeScript · React · Next.js · Angular · Node.js · Python · Java · SQL · PostgreSQL · GraphQL · MongoDB · CosmosDB · DynamoDB",
   },
   {
     title: "Mobile",
-    description: "React Native · Expo · Flutter",
+    description: "Expo · React Native · Flutter",
   },
   {
     title: "AI",
@@ -21,7 +21,7 @@ const skills = [
   },
   {
     title: "Cloud & Platforms",
-    description: "Docker · Microsoft Azure · Amazon Web Services · Supabase",
+    description: "Microsoft Azure · Amazon Web Services · Supabase",
   },
 ];
 
@@ -41,9 +41,9 @@ export default function Bio() {
             className="space-y-5 font-display text-2xl leading-relaxed md:text-[1.75rem]"
           >
             <p>
-              I&rsquo;m a software engineer and engineering lead in New York
-              City, building everything from small business sites to
-              enterprise platforms used across dozens of teams. My approach
+              I&rsquo;m a senior software engineer in New York City, building
+              everything from small business sites to enterprise platforms
+              used across dozens of teams. My approach
               pairs technical rigor with clean, maintainable code and
               interfaces that get out of the user&rsquo;s way &mdash; and I
               spend a good part of my week teaching other engineers to do

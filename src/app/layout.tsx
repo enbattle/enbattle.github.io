@@ -28,7 +28,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata = {
   title: "Steven Li — Software Engineer",
   description:
-    "Full stack engineering lead in New York City. Building enterprise platforms, teaching engineers, and shipping the occasional pathfinding visualizer.",
+    "Senior software engineer in New York City. Building enterprise platforms and AI agentic tooling, teaching engineers, and shipping the occasional pathfinding visualizer.",
 };
 
 export default function RootLayout({

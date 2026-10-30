@@ -9,58 +9,60 @@ const experiences = [
     company: "Accenture",
     period: "2021 — Present",
     positions: [
-            {
-        title: "Full Stack Senior Engineer",
-        period: "2025 — Present",
-        description: [
-          "Developed an AI-driven agentic SDLC using context-engineering knowledge ontology, custom MCP server, and reusable agent workflows spanning feature specification through automated multi-specialist adversarial code review",
-          "Led full-stack delivery of a knowledge-graph decision platform for financial transaction viability --- event-driven microservices and backend-for-frontend with micro-frontends"
-        ],
-        skills: [
-          "React",
-          "TypeScript",
-          "Next.js",
-          "Java",
-          "PostgreSQL",
-          "AWS",
-          "Azure",
-          "Python"
-        ],
-      },
       {
-        title: "Full Stack Engineer",
-        period: "2024 — 2025",
+        title: "Full Stack Senior Engineer",
+        period: "2024 — Present",
         description: [
-          "Manage a team of engineers building an enterprise-scale event tracking platform monitoring 30+ critical applications to identify and resolve customer experience bottlenecks in real time",
-          "Lead development of a gamification learning engine scaled to 1,000+ internal users across seminars and instructor-led courses, with seamless API integration into existing training platforms",
-          "Teach software engineering as Senior Instructor for front-end and back-end technologies to 200+ students, and onboard and mentor 30+ instructors in the engineering program",
+          "Lead a team of engineers to develop and deploy an AI gamification learning engine scaled to 1,000+ internal users across seminars and instructor-led courses, enabling seamless API integration with existing training platforms",
+          "Manage a team of engineers to enhance an enterprise-scale event tracking system monitoring 30+ critical applications with logging and observability, identifying customer experience bottlenecks in real time by more than 25%",
+          "Developed the standard framework for a context-engineering knowledge workspace with a custom MCP server, and reusable agent workflows and skills for 20+ different teams and workstreams",
+          "Teach software engineering as Senior Instructor for AI and full stack engineering technologies to 200+ students, and onboard and mentor 30+ instructors in the engineering program",
         ],
         skills: [
           "React",
           "TypeScript",
           "Next.js",
           "Node.js",
-          "MySQL",
+          "Python",
+          "Java",
+          "PostgreSQL",
           "CosmosDB",
           "Azure",
+          "AWS",
         ],
       },
       {
-        title: "Back-End Engineer",
+        title: "Back-end Senior Engineer",
         period: "2023 — 2024",
         description: [
-          "Enhanced e-commerce presence for a major brand by developing and deploying 50+ production-ready APIs with comprehensive testing, documentation, and a formal integration to the existing platform",
+          "Enhanced e-commerce presence for a major brand by developing and deploying 50+ production-ready APIs with comprehensive testing and documentation, with seamless integration to the existing platform",
         ],
         skills: ["React", "TypeScript", "Azure", "Apollo GraphQL", "GraphQL"],
       },
       {
-        title: "Front-End Engineer",
+        title: "Front-end Engineer",
         period: "2021 — 2023",
         description: [
-          "Modernized a desktop application for an investment firm, increasing service delivery speed by 40% while implementing robust SDK integration for authentication and search with intuitive navigation",
-          "Built comparative proof-of-concept applications using Glue42 and OpenFin, benchmarking scalability, reliability, and cost to enable a data-driven vendor decision that produced annual contract savings",
+          "Modernized a desktop application for an investment firm, increasing service delivery speed by 40% while implementing robust SDK integration for streamlined authentication and efficient searching with intuitive navigation",
+          "Developed comparative proof-of-concept applications using Glue42 and OpenFin, benchmarking scalability, reliability, and cost to enable a data-driven vendor selection that produced significant annual savings on technology contracts",
         ],
         skills: ["Angular", "TypeScript", "Node.js", "Electron", "Glue42", "Azure"],
+      },
+    ],
+  },
+  {
+    company: "Crestron Electronics",
+    period: "2020",
+    positions: [
+      {
+        title: "Software Engineering Intern",
+        period: "Jan — Jun 2020",
+        description: [
+          "Developed efficient smart home drivers in C# for the latest audiovisual systems, TVs, and security systems integrated with Crestron's control platforms",
+          "Examined codebase quality using the company's Java/C# framework and supported the security test environment",
+          "Collaborated with quality engineering teams on regression testing and analysis for smart home drivers and control systems pre-release",
+        ],
+        skills: ["C#", "Java"],
       },
     ],
   },

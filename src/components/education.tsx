@@ -6,9 +6,13 @@ import { SectionHeading } from "@/components/section-heading";
 
 const education = [
   {
-    degree: "B.S. Computer Science & B.S. Information Technology and Web Science",
     institution: "Rensselaer Polytechnic Institute",
+    location: "Troy, NY",
     period: "2017 — 2021",
+    degrees: [
+      "B.S. Computer Science",
+      "B.S. Information Technology & Web Science",
+    ],
   },
 ];
 
@@ -26,7 +30,7 @@ export default function Education() {
         <div className="space-y-8">
           {education.map((edu, i) => (
             <motion.div
-              key={edu.degree}
+              key={edu.institution}
               initial={{ opacity: 0, y: 12 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * i }}
@@ -36,8 +40,14 @@ export default function Education() {
                 {edu.period}
               </p>
               <div>
-                <h3 className="font-display text-2xl">{edu.degree}</h3>
-                <p className="mt-1 text-muted-foreground">{edu.institution}</p>
+                {edu.degrees.map((degree) => (
+                  <h3 key={degree} className="font-display text-2xl">
+                    {degree}
+                  </h3>
+                ))}
+                <p className="mt-2 text-muted-foreground">
+                  {edu.institution} &middot; {edu.location}
+                </p>
               </div>
             </motion.div>
           ))}
