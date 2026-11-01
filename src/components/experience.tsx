@@ -13,10 +13,10 @@ const experiences = [
         title: "Full Stack Senior Engineer",
         period: "2024 — Present",
         description: [
-          "Lead a team of engineers to develop and deploy an AI gamification learning engine scaled to 1,000+ internal users across seminars and instructor-led courses, enabling seamless API integration with existing training platforms",
-          "Manage a team of engineers to enhance an enterprise-scale event tracking system monitoring 30+ critical applications with logging and observability, identifying customer experience bottlenecks in real time by more than 25%",
-          "Developed the standard framework for a context-engineering knowledge workspace with a custom MCP server, and reusable agent workflows and skills for 20+ different teams and workstreams",
-          "Teach software engineering as Senior Instructor for AI and full stack engineering technologies to 200+ students, and onboard and mentor 30+ instructors in the engineering program",
+          "Deployed a multi-agent learning platform scaled to 1,000+ users, establishing rigorous LLM eval pipelines and custom guardrails to guarantee high-fidelity execution across existing instructor-led training systems",
+          "Enhanced an enterprise-scale event tracking system for 30+ critical applications, improving real-time customer experience monitoring by more than 25%",
+          "Developed a standard framework for a context-engineering knowledge workspace with reusable agent workflows and skills, benefiting 20+ teams",
+          "Served as Senior Instructor, teaching software engineering to over 200 students and mentoring 30+ instructors",
         ],
         skills: [
           "React",
@@ -32,7 +32,7 @@ const experiences = [
         ],
       },
       {
-        title: "Back-end Senior Engineer",
+        title: "Back-end Engineer",
         period: "2023 — 2024",
         description: [
           "Enhanced e-commerce presence for a major brand by developing and deploying 50+ production-ready APIs with comprehensive testing and documentation, with seamless integration to the existing platform",
@@ -43,8 +43,9 @@ const experiences = [
         title: "Front-end Engineer",
         period: "2021 — 2023",
         description: [
-          "Modernized a desktop application for an investment firm, increasing service delivery speed by 40% while implementing robust SDK integration for streamlined authentication and efficient searching with intuitive navigation",
-          "Developed comparative proof-of-concept applications using Glue42 and OpenFin, benchmarking scalability, reliability, and cost to enable a data-driven vendor selection that produced significant annual savings on technology contracts",
+          "Modernized a desktop application for an investment firm, enhancing service delivery speed by 40%",
+          "Implemented robust SDK integration for streamlined authentication and efficient searching",
+          "Developed comparative proof-of-concept applications using Glue42 and OpenFin, enabling data-driven vendor selection",
         ],
         skills: ["Angular", "TypeScript", "Node.js", "Electron", "Glue42", "Azure"],
       },

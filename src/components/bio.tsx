@@ -8,11 +8,7 @@ const skills = [
   {
     title: "Full Stack",
     description:
-      "TypeScript · React · Next.js · Angular · Node.js · Python · Java · SQL · PostgreSQL · GraphQL · MongoDB · CosmosDB · DynamoDB",
-  },
-  {
-    title: "Mobile",
-    description: "Expo · React Native · Flutter",
+      "TypeScript · React · React Native · Next.js · Angular · Node.js · Python · Java · SQL · PostgreSQL · GraphQL · MongoDB · CosmosDB · DynamoDB · Expo · Flutter",
   },
   {
     title: "AI",
@@ -20,8 +16,9 @@ const skills = [
       "LLM API integration · RAG pipeline design · agentic workflows & multi-agent orchestration · custom MCP server development · AI coding agent tooling (custom subagents, hooks, guardrails)",
   },
   {
-    title: "Cloud & Platforms",
-    description: "Microsoft Azure · Amazon Web Services · Supabase",
+    title: "Technologies & Tools",
+    description:
+      "Microsoft Azure · Amazon Web Services · Supabase · Kubernetes · Docker · Redis · CI/CD",
   },
 ];
 
